@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Guessing Game</title>
+    <style>
+        html {
+            font-family: sans-serif;
+        }
+
+        body {
+            width: 50%;
+            max-width: 800px;
+            min-width: 480px;
+            margin: 0 auto;
+        }
+
+        .form input[type="number"] {
+            width: 200px;
+        }
+
+        .lastResult {
+            color: white;
+            padding: 3px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Number guessing game</h1>
+
+    <p>
+        We have selected a random number between 1 and 100. See if you can guess 
+        it in 10 turns or fewer. We'll tell you if your guess was too high or too low
+    </p>
+
+    <div class="form">
+        <label for="guessField">Enter a guess: </label>
+        <input 
+            type="number" 
+            min="1"
+            max="100"
+            required
+            id="guessField"
+            class="guessField"
+        />
+        <input 
+            type="submit" 
+            value="Submit guess"
+            class="guessSubmit"
+        />
+    </div>
+
+    <div class="resultParas">
+        <p class="guesses"></p>
+        <p class="lastResult"></p>
+        <p class="lowOrHi"></p>
+    </div>
+
+    <script>
+        // The initial design brief
+        /*
+            "I want you to create a simple "guess the number" type game. It should choose a random number between 1 and 100, then challenge the player to guess the number in 10 turns. After each turn, the player should be told if they are right or wrong, and if they are wrong, whether the guess was too low or too high. It should also tell the player what numbers they previously guessed. The game will end once the player guesses correctly, or once they run out of turns. When the game ends, the player should be given an option to start playing again."
+        */
+
+        // Pseudocode
+        /*
+            1. Generate a random number between 1 and 100.
+
+            2. Record the turn number the player is on. Start it on 1.
+
+            3. Provide the player with a way to guess what the number is.
+
+            4. Once a guess has been submitted first record it somewhere so the user can see their previous guesses.
+
+            5. Next, check whether it is the correct number.
+
+            6. If it is correct:
+
+                1. Display congratulations message.
+                2. Stop the player from being able to enter more guesses (this would mess the game up).
+                3. Display control allowing the player to restart the game.
+            
+            7. If it is wrong and the player has turns left:
+
+                1. Tell the player they are wrong and whether their guess was too high or too low.
+                2. Allow them to enter another guess.
+                3. Increment the turn number by 1.
+
+            8. If it is wrong and the player has no turns left:
+
+                1. Tell the player it is game over.
+                2. Stop the player from being able to enter more guesses (this would mess the game up).
+                3. Display control allowing the player to restart the game.
+
+            9. Once the game restarts, make sure the game logic and UI are completely reset, then go back to step 1.
+        */
+
+        // Adding variables to store our data
+        let randomNumber = Math.floor(Math.random() * 100) + 1;
+
+        const guesses = document.querySelector(".guesses");
+        const lastResult = document.querySelector(".lastResult");
+        const lowOrHi = document.querySelector(".lowOrHi");
+
+        const guessSubmit = document.querySelector(".guessSubmit");
+        const guessField = document.querySelector(".guessField");
+        
+        let guessCount = 1;
+        let resetButton;
+
+        // Functions
+        // function checkGuess(){
+        //     console.log("I am a placeholder");
+        // }        
+        // checkGuess();
+        
+        // Text strings, in "I am a placeholder" and `Hello ${name}`
+        // function checkGuess(){
+        //     console.log("I am a placeholder");
+        // }
+        // const name = "Ricky Yusuf";
+        // const greeting = `Hello ${name}`;
+
+        // Conditionals
+        function checkGuess() {
+            const userGuess = Number(guessField.value);
+            if (guessCount === 1) {
+                guesses.textContent = "Previous guesses:";
+            }
+            guesses.textContent = `${guesses.textContent} ${userGuess}`;
+
+            if (userGuess === randomNumber) {
+                lastResult.textContent = "Congratulations! You got it right";
+                lastResult.style.backgroundColor = "green";
+                lowOrHi.textContent = "";
+                setGameOver();
+            } else if (guessCount === 10) {
+                lastResult.textContent = "!!!GAME OVER!!!";
+                lowOrHi.textContent = "";
+                setGameOver();
+            } else {
+                lastResult.textContent = "Wrong!";
+                lastResult.style.backgroundColor = "red";
+                if (userGuess < randomNumber) {
+                    lowOrHi.textContent = "Last guess was too low!"
+                } else if (userGuess > randomNumber) {
+                    lowOrHi.textContent = "Last guess was too high!";
+                }
+            }
+
+            guessCount++;
+            guessField.value = "";
+            guessField.focus();
+        }
+
+        // Events
+        guessSubmit.addEventListener("click", checkGuess);
+
+        // Finishing the game functionality
+        function setGameOver() {
+            guessField.disabled = "true";
+            guessSubmit.disabled = "true";
+            resetButton = document.createElement("button");
+            resetButton.textContent = "Start new game";
+            document.body.append(resetButton);
+            resetButton.addEventListener("click", resetGame);
+        }
+
+        function resetGame() {
+            guessCount = 1;
+
+            const resetParas = document.querySelectorAll(".resultParas p");
+            for (const resetPara of resetParas) {
+                resetPara.textContent = "";
+            }
+
+            resetButton.parentNode.removeChild(resetButton);
+
+            guessField.disabled = false;            
+            guessSubmit.disabled = false;            
+            guessField.value = "";            
+            guessField.focus();
+            
+            lastResult.style.backgroundColor = "white";
+
+            randomNumber = Math.floor(Math.random() * 100) + 1;
+        }
+
+        // Loops
+        // const fruits = ["apples", "bananas","cherries" ];
+        // for (const fruit of fruits) {
+        //     console.log(fruit);
+        // }
+
+        const resetParas = document.querySelectorAll(".resultParas p");
+        for (const resetPara of resetParas) {
+            resetPara.textContent = "";
+        }
+    </script>
+</body>
+</html>

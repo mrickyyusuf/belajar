@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Numbers & Operators Task with MDN</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      p {
+        color: purple;
+        margin: 0.5em 0;
+      }
+    </style>
+  </head>
+  <body>
+    <section></section>
+
+    <script>
+      // Math 1
+
+      let finalResult;
+      let evenOddResult;
+
+      // Don't edit the code above here!
+
+      // Add your code here
+      let a = 11;
+      let b = 13;
+      let c = 1;
+      let d = 3;
+
+      let sum1 = a + b;
+      let sum2 = d - c;
+
+      finalResult = sum1 * sum2;
+      evenOddResult = finalResult % 2;
+
+      // Don't edit the code below here!
+
+      const section2 = document.querySelector("section");
+      const para1 = document.createElement("p");
+      const finalResultCheck =
+        finalResult === 48 ? `Yes, well done!` : `No, it is ${finalResult}`;
+      para1.textContent = `Is the finalResult 48? ${finalResultCheck}`;
+      const para2 = document.createElement("p");
+      const evenOddResultCheck =
+        evenOddResult === 0
+          ? "The final result is even!"
+          : "The final result is odd. Hrm.";
+      para2.textContent = evenOddResultCheck;
+      section2.appendChild(para1);
+      section2.appendChild(para2);
+
+      // Math 2
+      // Final result should be 4633.33
+
+      let result = 7 + 13 / 9 + 7;
+      let result2 = (100 / 2) * 6;
+
+      // Add your code here
+      result *= result2;
+      finalResult1 = result;
+      typeof finalResult1;
+      finalNumber = finalResult1.Number(finalResult1);
+
+      // Don't edit the code below here!
+
+      const section1 = document.querySelector("section");
+      const para1 = document.createElement("p");
+      para1.textContent = `Your finalResult is ${finalResult}`;
+      const para2 = document.createElement("p");
+      const finalNumberCheck =
+        isNaN(finalNumber) === false
+          ? "finalNumber is a number type. Well done!"
+          : `Oops! finalNumber is not a number.`;
+      para2.textContent = finalNumberCheck;
+      section1.appendChild(para1);
+      section1.appendChild(para2);
+
+      // Math 3
+      // Statement 1: The elephant weighs less than the mouse
+      const eleWeight = 1000;
+      const mouseWeight = 2;
+      // Statement 2: The Ostrich is taller than the duck
+      const ostrichHeight = 2;
+      const duckHeight = 0.3;
+      // Statement 3: The two passwords match
+      const pwd1 = "stromboli";
+      const pwd2 = "stROmBoLi";
+
+      // Don't edit the code above here!
+
+      // Add your code here
+      weightComparison = eleWeight > mouseWeight;
+      heightComparison = ostrichHeight > duckHeight;
+      pwdMatch = pwd1 === pwd2;
+
+      // Don't edit the code below here!
+
+      const section0 = document.querySelector("section");
+      const para1 = document.createElement("p");
+      const para2 = document.createElement("p");
+      const para3 = document.createElement("p");
+      const weightTest = weightComparison
+        ? "True — elephants do weigh less than mice!?"
+        : "False — of course an elephant is heavier than a mouse!";
+      const heightTest = heightComparison
+        ? "True — an ostrich is indeed taller than a duck!"
+        : "False — apparently a duck is taller than an ostrich!?";
+      const pwdTest = pwdMatch
+        ? "True — the passwords match."
+        : "False — the passwords do not match; please check them";
+      para1.textContent = weightTest;
+      section0.appendChild(para1);
+      para2.textContent = heightTest;
+      section0.appendChild(para2);
+      para3.textContent = pwdTest;
+      section0.appendChild(para3);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task in concept</title>
+    <style>
+      .output {
+        min-height: 100px;
+      }
+
+      .output {
+        margin: 1rem;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Live output</h2>
+
+    <div class="output">
+      <ul></ul>
+
+      <p></p>
+    </div>
+
+    <div class="output">
+      <label for="search-box">Enter a search term: </label>
+      <input id="search-box" type="search" />
+      <button>Search</button>
+
+      <ul></ul>
+    </div>
+
+    <script>
+      // Task 1
+      /*
+      PSEUDOCODE:
+      - jadiin array, taro di var products
+      - bikin for..of, ngoding di dalem for..of
+      - jadiin name:price ke string pakai split, taro di 2 var terpisah antar name & price
+      - ubah price ke int
+      - di dalem for..of part 4, loop price ke var total (ada di bag. atas)
+      - ubah itemText menjadi name-price, gunakan string concat
+      - } di part 6
+      - review ulang string & array method
+      */
+
+      const list = document.querySelector(".output ul");
+      const totalBox = document.querySelector(".output p");
+      let total = 0;
+      list.textContent = "";
+      totalBox.textContent = "";
+      // Part 1
+      let products = [
+        "Underpants:6.99",
+        "Socks:5.99",
+        "T-shirt:14.99",
+        "Trousers:31.99",
+        "Shoes:23.99",
+      ];
+
+      // Part 2
+      for (const item of products) {
+        const nmPrc = item.split(":");
+
+        // Part 3
+        const name = nmPrc[0];
+        const price = Number(nmPrc[1]);
+
+        // Part 4
+        total += price;
+
+        // Part 5
+        const itemText = `${name} - $${price}`;
+
+        const listItem = document.createElement("li");
+        listItem.textContent = itemText;
+        list.appendChild(listItem);
+
+        // Part 6
+      }
+      totalBox.textContent = `Total: $${total.toFixed(2)}`;
+
+      // Task 2
+      const list = document.querySelector(".output ul");
+      const searchInput = document.querySelector(".output input");
+      const searchBtn = document.querySelector(".output button");
+
+      list.textContent = "";
+
+      const myHistory = [];
+      const MAX_HISTORY = 5;
+
+      searchBtn.addEventListener("click", () => {
+        // we will only allow a term to be entered if the search input isn't empty
+        if (searchInput.value !== "") {
+          // Part 1
+          myHistory.unshift(searchInput.value);
+
+          // empty the list so that we don't display duplicate entries
+          // the display is regenerated every time a search term is entered.
+          list.textContent = "";
+
+          // loop through the array, and display all the search terms in the list
+          for (const itemText of myHistory) {
+            const listItem = document.createElement("li");
+            listItem.textContent = itemText;
+            list.appendChild(listItem);
+          }
+
+          // If the array length is 5 or more, remove the oldest search term
+          if (myHistory.length >= MAX_HISTORY) {
+            // Part 2
+            myHistory.pop();
+          }
+
+          // empty the search input and focus it, ready for the next term to be entered
+          searchInput.value = "";
+          searchInput.focus();
+        }
+      });
+    </script>
+  </body>
+</html>

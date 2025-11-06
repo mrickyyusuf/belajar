@@ -1,0 +1,1157 @@
+HTML
+Html dasar:
+1. Intro:
+• HTML = bahasa markup bukan pemrograman,
+• Mark up seperti tag untuk memberitahu browser, bagaimana sebuah konten akan ditampilkan,
+• Penemu web = Tim Berners-Lee, selain itu juga penemu http, html, www, web server, web page, web browser,
+• W3c = organisasi pembuat standard web orang-orangnya berasal dari seluruh dunia, Tim Berners Lee adalah direkturnya,
+• W3c untuk mengembangkan protokol dan panduan yang akan memastikan perkembangan dari web ini jangka panjang,
+• Website: evolution of the web,
+• Html -> membuat struktur halaman web, menyajikan konten -> manequin
+• Css -> menghias -> pakaian
+• Javascript -> interaktivitas -> otak
+
+2. Hello world:
+• Membuat code & file html, membuat struktur:
+<!doctype html>
+<html>
+<head>
+<title></title>
+</head>
+<body>
+</body>
+</html>
+• Tag head & body adalah tag utama,
+• Next: tag apa saja yang boleh di head dan body, struktur di html, ada yang namanya properti/atribut, dan value
+
+3. Code editor:
+• Notepad, sublime, vscode -> pakai sublime,
+• Download & setup sublime,
+• Membuat struktur,
+• Tutorial/shortcut seputar sublime
+
+4. Tag:
+• Tag ada yang berpasangan ada yang tidak, review materi sebelumnya (struktur),
+• Tag apa saya yang bisa ada di dalam head dan body,
+• Tag di head:
+• Judul halaman: <title></title>
+• CSS: <style></style>
+• JS: <script></script>
+• Metadata/deskripsi web: <meta></meta>
+• Encoding? Deskripsi, keyword, author
+• Tag di body (ada banyak):
+• Teks: <h1>, <h2>, <h3>, <h4>, <h6>, <p>, ...
+• Pendukung teks: <br>, <hr>, <em>, <strong>
+• Image: <img>
+• Hyperlink: <a>
+• List (bullets & numbering): <ul>, <ol>, <li>, <dl>, <dt>, <dd>
+• Tabel: <table>, <thead>, <tbody>, ...
+• Form: <form>, <input>, <select>, <button>, ...
+• Script/JS: <script>
+• Object: <object>
+• Grouping: <div>, <span>
+• Commet: <!-- comment -->
+• Struktur tag (element):
+<namatag>
+<namatag atribut/properti="nilai/value">
+• Tag/elemen boleh tak memiliki atribut & memiliki > 1 atribut
+• Atribut global (semua tag punya atribut ini): accesskey, class, id, dir, lang, style, tabindex, title
+• Dokumentasi di w3school
+
+5. Paragraf:
+• <p>paragraf</p>
+• <br>nambah spasi</br>
+• <hr>garis horizontal</hr>
+• <b>bold</b>
+• <i>italic</i>
+• <u>undeline</u>
+• <strong>teks penting spt bold</strong>
+• <em>emphasize spt italic</em>
+• Source code ada di file
+
+6. Heading:
+• <h1>Font sangat besar</h1>
+• <h2>Font besar</h2>
+• <h3>Font sedang</h3>
+• <h4>Font lebih kecil dari sedang</h4>
+• <h5>Font kecil</h5>
+• <h6>Font sangat kecil</h6>
+• Source code ada di file
+• Membuat heading berdasarkan hierarki kepentingan, biasanya dipakai untuk menulis/menampilkan judul
+
+7. Tag:
+• <ol>Daftar terurut, contoh: 1. 2. 3.</ol>
+• Mengubah urutan angka <ol>: <ol type=""></ol>
+• Defaultnya: 1, A, a, I, i
+• <ul>tak urut, •</ul>
+• Untuk mengubah <ul>: <ul type=""></ul>
+• Default: disc, square, circle
+• <dl>definition list (daftar terminologi & definisi)</dl>
+• Contoh <dl>:
+<dl>
+<dt>term 1</dt>
+<dd>description 1</dd>
+<dt>term 2</dt>
+<dd>description 2</dd>
+...
+</dl> -> berurutan, dt dd, dt dd, dst
+• Source code:
+<!DOCTYPE html>
+<html>
+<head>
+<title>HTML List</title>
+</head>
+<body>
+</body>
+</html>
+
+8. Hyperlink:
+• Koneksi dari sumber web ke sumber lain
+• <a>Anchor</a>
+• Source code ada di file
+• Href -> Ekternal, internal link/relative url
+• Eksternal: link dari web lain
+• Membuat file kedua hyperlink untuk coba connect/pergi ke satu file dg yg lain (internal link)
+• Relative url: misal ada 2 file, 1 file masuk ke folder, di file html 2 mau menuju ke file 1 lewat link, gabisa, harus pake ../ kalo foldernya diatasnya
+• Contoh: <a href="../halaman-1.html">Menuju halaman 1</a>
+• Kalo ada file 1 dan 2 ada di folder berbeda gimana? (Ada 2 folder, 2 file html, keduanya terletak di folder berbeda, ingin akses/menuju file sesama html lewat link)
+• Contoh: <a href="../admin/halaman-2.html">Naik 1 folder, menuju folder lain, akses html 1</a>
+• Page anchor #about, index.html#contact
+• Ditambah atribut id: <tag id="bagian1">
+• Cara aksesnya pakai #: <a href="#bagian1">
+• Bisa juga akses dari 1 file ke file lain yang masih 1 folder: <a href="halaman3.html#bagian3">Ke hal 3, bag 3</a> -> saat di klik ke tab baru
+• Cara agar masih di tab yang sama: <a target=""><a>
+• Dengan value: _self, _blank, _parent, _top
+• _self: membuka link di halaman tab yang sama
+• _blank: tab baru
+Source code ada di file
+<!DOCTYPE html>
+<html>
+<head>
+<title>Hyperlink</title>
+</head>
+<body>
+<a></a>
+</body>
+</html>
+
+9. Image:
+• <img src="image/logo.png">
+• Internal resource & eksternal resource (hotlink, not recomended)
+• Atribut img: src, alt, title, width, height
+• Width & height: px, %
+• Hyperlink + img: <a href="link"><img src="gambar"></a> -> saat klik gambar mengarah ke link tertentu
+• Source code ada di file
+
+10. Table:
+• Horizontal = baris
+• Vertikal = kolom
+• Kotak = cell/data
+• Judul = header, horizontal & vertikal
+• <table></table> -> ada yang simpel & kompleks
+• Simpel:
+<table>
+<tr> -> table row, didalam tag tr <td> digunakan untuk membuat column
+<td>...</td> -> table data
+</tr>
+Source code ada di file
+</table>
+• Kompleks:
+Source code ada di file
+• Menambahkan border menggunakan atribut: (border, cellspacing, cellpadding) -> digunakan di css,
+• colspan, rowspan
+• Source code:
+
+11. Table lanjutan:
+• Colspan & rowspan
+• Code html, tugas
+• Source code ada di file
+coba-coba eksperimen colspan & rowspan
+
+12. Form:
+• Untuk mengelola data input dari user
+• Textfield
+• Combobox/dropdown/listbox
+• Radiobutton
+• Checkbox
+• Tag: <form></form>
+• Elemen form: input, textarea, select, button, label
+• <input type=""> -> single tag, atribut input: text, password, radio, checkbox, (sumbit, reset, button) -> tidak dibuat dengan input
+• <label></label> -> khusus tag input di dalam form:
+• <label for="username">Username : </label> -> kelebihan menggunakan label, jika di klik maka bisa langsung memasukkan input
+• <input type="text" id="username"> -> id harus sama dengan for
+• Sama tapi password, bedanya kalo diisi jadi bintang
+• Radiobutton
+• Checkbox
+• Submit -> ga disaranin pake input (disarankan di css)
+• <button type=""></button> -> type: submit, reset, button
+• Source code ada di file
+
+13. Form lanjutan:
+• <textarea></textarea>
+• <select>
+• <option></option>
+• </select>
+• Latihan nambahin elemen input dimasukkan ke dalam table karena belum belajar css, jika sudah rapih -> hilangkan border
+• Next belajar: html5
+• Dokumentasi form ada di w3school
+• Source code ada di file
+
+CSS 
+CSS dasar:
+1. Intro:
+
+
+2. Anatomi:
+
+
+3. Penempatan sintaks:
+
+
+4. Font styling:
+font-family : mengatur jenis font yang akan digunakan
+value : nama font, generic family
+contoh :
+      h1 {
+        font-family: arial, verdana, sans-serif;
+      }
+
+      p {
+        font-family : georgia, serif;
+      }
+arial, verdana = nama font, sans-serif = generic family
+kalau nama font/value > 1, maka sistem operasi akan membaca dari value pertama
+code di file
+font-size : mengatur ukuran font
+value : px, %, em
+font-weight : mengatur ketebalan font
+value : lighter, normal, 100-900, bold, bolder
+fon-variant : mengubah font menjadi small caps
+value : normal, small-caps
+small caps adalah semua font huruf capital tapi ukuran huruf awalnya > dari huruf setelahnya
+font-style : mengubah font menjadi bercetak miring
+value : normal, italic, oblique
+beda italic dan oblique, italic miring & ada ciri khas, sedangkan oblique miring & tak ada ciri khas (style default)
+line-height : mengatur spasi antar baris
+value : normal, px, em
+untuk mengatur jarak antar baris/paragraf
+css font shorthand : 
+dari : 
+      body {
+        font-style : italic;
+        font-variant : normal;
+        font-weight :  bold;
+        font-size : 16px;
+        line-height : 18px;
+        font-family : helvetica, arial, sens-serif;
+      }
+menjadi :
+      body {
+        font : italic normal bold 16px/18px helvetica, arial, sans-serif;
+      }
+urutannya :
+italic = font-style (opsional)
+normal = font-variant (opsional)
+bold = font-weight (opsional)
+16px = font-size (wajib)
+18px = line-height (opsional)
+helvetica, arial, sans-serif = font-family (wajib)
+
+5. Text styling:
+font terkait dengan theme face (arial, sans-serif, dll), sedangkan text terkait dengan property pendukungnya (color, indentation, dll)
+komentar : /**/
+property text : 
+color = memberi warna pada tulisan. bisa diberi dengan nama warna (white, black, blue), hexadecimal (#ff0000, #20b2aa, #4169e1, dll), rgb rgb(32, 178, 170), dll
+colorpicker/photoshop untuk mencari code hexa
+text-align = mengatur format paragraf/teks (left, right, center, justify)
+text-indent = memberi indentasi pada paragraf/teks (px, %)
+text-decoration = mengatur dekorasi pada teks (none, overline, underline, line-through)
+text-transform = mengubah jenis huruf menjadi kecil, besar, kapital (none, uppercase, lowercase, capitalize)
+letter-spacing = mengatur spasi antar huruf (normal, px)
+word-spacing = mengatur spasi antar kata
+
+6. Background:
+background-color = mengatur warna background
+background-image = mengatur gambar yang akan digunakan pada background
+backgorund-position = mengatur posisi gambar pada background 
+background-repeat = mengatur jenis pengulangan gambar pada background
+subtlepatterns.com
+shorthand :
+background: color url() position repeat;
+
+7. Selector:
+
+
+8. Pseudo class:
+
+
+9. Inheritance:
+
+
+10. Specificity:
+
+
+CSS layouting:
+15. Intro:
+
+
+16. Display:
+
+
+17. Dimension & overflow:
+- width & height : px, %, in, cm, mm, pt, pc. Eksperimen coba-coba sendiri
+kalau child > parent maka keluar
+- div mempertahankan width, konten banyak jadi ga nyamping, kebawah (relatif dengan konten), ditambahin height, heightnya absolute tidak ladi relatif dgn konten
+- solusi konten ga keluar, dimensinya absolut pakai overflow, untuk kasus elemen yang keluar dari parent
+- value overflow : visible (default), auto (scroll bila konten sudah tak cukup, kalau cukup scrollnya hilang), hidden (konten berlebih akan disembunyikan), scroll (sama seperti auto tapi kalau konten cukup scrollnya trtap ada)
+- kesimpulan : dimensi = width height, unit = px, %, dll. Overflow = untuk mengatur elemen yang tak cukup dengan parentnya (visible, auto, hidden, scroll)
+*NOTES!* : mulai dari sini, mungkin di css ini gw bakal tulis teknik-tekniknya disini jadi lu coba-coba sendiri aja biar ga bingungin pas baca code dikemudian hari dan ga banyak comment juga
+
+18. Box model concept:
+- setiap elemen di halaman berada di dalam sebuah box
+- kita bisa mengatur ukuran dan posisi kotak tersebut
+- kita bisa memberi warna / gambar sebagai background kotak tersebut
+- dokumentasi css-tricks.com terkait box model
+- studi kasus inspect facebook, 3d view browser fiture
+- css box model mendefinisikan kotak yang dihasilkan oleh sebuah elemen, lalu menampilkannay sesuai dengan format visualnya, dokumentasi di w3 terkait box
+- css box model terdiri dari margin, border, padding dan content, dokumentasi di w3school terkait box model
+- ilustrasi kotak
+- margin = area transparan di sekitar kotak (di luar border)
+- padding = area transparan di dalam kotak (antara content dan border)
+- border = batas disekeliling content dan padding
+- content = konten sebenarnya di dalam box, bisa berupa teks atau gambar
+- yang bisa diatur propertinya dengan css box model hanya 3 yaitu margin, padding, border, cara mengaturnya : margin-top, margin-right, margin-bottom, margin-left, margin. padding-top, padding-right, padding-bottom, padding-left, padding. border-top, border-right, border-bottom, border-left, border.
+
+19. Box model margin:
+- cara pakai : margin-left, margin-right, margin-top, margin-bottom, margin
+- overlapping margin : ga bakal ngedorong kalo valuenya kalah (vertikal), div display block ubah menjadi inline / inline block, inline-block = sejajar horizontal dan bisa ubah ukuran, inlina-block masih ada jarak kecil padahal belum kita tentukan marginnya, solusinya hilangkan spasi di elemen div (aneh), margin horizontal nambah / ngedorong ga kaya vertikal (horizontal)
+- negative margin : kita tau kalau vertikal gabisa ngedorong tapi kalau negative bisa nyamperin elemen, begitu pula dibawahnya (3, 2 ke 1)
+- auto : nilai dari property margin khusus (kiri kanan) dan harus keduanya tak boleh salah satu
+- shorthand : margin: 50px; artinya memberi margin keempat sisi sebanyak 50px. 
+1. value pertama atas bawah, kedua kiri kanan. 
+2. value pertama atas, kedua kiri kanan, ketiga bawah. 
+3. value pertama atas, kedua kanan, ketiga bawah, keempat kiri (searah jarum jam).
+
+20. Box model padding & border:
+
+
+21. Box model CSS reset:
+- mengatur ulang nilai nilai default yang ada pada elemen html khususnya margin & padding
+- ada jarak padahal ga dikasih, dikasih margin 0 juga ga knapa napa, terjadi karena banyak elemen html yang sudah memiliki margin & pading sendiri (default), contohnya body disini coba kita kasih margin 0 -> reset
+- cara ini belum praktis karena kalau elemen banyak, solusinya pakai bintang *, tapi masih kurang efektif karena ke semua elemen html
+- css reset smeyerweb earch google, copas
+
+22. Box model latihan:
+- balsamic
+- css color names w3school
+- jangan asal pakai gambar, copyright, solusinya unsplash
+- ubah ukuran pakai photoshop / terserah
+- lorem100
+- subtlepatterns
+
+23. Float:
+- properti css, untuk mengatur posisi sebuah elemen. Sebuah elemen dapat dipaksa untuk berada di sebelah kiri atau kanan dari parent/pembungkusnya dengan menggunakan properti ini, css.tricks.com all abaout floats
+- value float : none, left, right
+- normalflow vs out of flow, biasanya pakai normal flow di tutor2 sebelumnya (box model), w3 visuren. Float tipenya yang out of flow
+- kotak biru / .tiga naik ke belakang .dua padahal yang di float left yang .dua, artinya yang .dua css bilang bahwa .dua keluar dari floatnya, begitu pula float right
+- yang bisa dilakukan menggunakan properti float :
+  - text wrapping = membuat teks mengelilingi gambar / elemen lain
+  - image gallery = membuat serangkaian gambar menjadi galeri
+  - multi-column layout = membuat halaman memiliki beberapa kolom
+  - dll
+- .kotak{$}*10
+- solusi masalah di next materi
+
+24. Clear:
+- masalah text wrapping : ketika text lebih sedikit dari tinggi gambar, container jebol
+- solusinya : menggunakan property overflow menggunakan <div> kosong, menggunakan teknik micro clrearfix
+- property clear css : befungsi mengehentikan / membersihkan float (left, right, both)
+- pakai div class clear jadi ga rapih, solusinya pakai micro clearfix
+- copas, sama aja pakai clear both tapi teknik ini memungkinkan kita untuk ngga nambahin  html kosong seperti clear css, karena teknik ini menggunakan pseudo elemen
+
+25. Float latihan:
+- latihan box model
+- mockup menggunakan balsamic di menit 2
+- praktik code di css reset file
+
+26. Position static & relative:
+- penting karena dapat melakukan tata letak dari html yang kita buat sesuai dengan keinginan kita
+- review materi sebelumnya
+-  kalo pake margin kan kalo geser elemen di sekitarnya ngikut, position hadir untuk solusi masalah tersebut (geser elemen tanpa elemen lainnya terpengaruh)
+- css position value : static, relative, absolute, fixed
+- kalo ga dikasih property position pada suatu elemen maka property position defaultnya = static
+- menggunakan position selain static (non-static), akan membuat sebuah elemen menjadi seolah-olah berbeda dimensi dari elemen lainnya
+- elemen yang diberi position selain static dapat menggunakan properti top, left, bottom, dan right untuk mengatur posisinya
+- tinkercad
+- relative itu ibarat keluar/ maju 1 lapisan / dimensi, seolah keluar dari layar menghampiri kita, sehingga punya akses ke property top left bottom right sehingga bisa pindahin kemana pun dan tak mengganggu elemen lainnya
+- position intinya yang tadinya berada dalam flow normal, kita buat dia keluar dari flow (overflow, maju 1 dimensi / lapisan)
+- relative :
+  - ketika kita menggerakkan elemen dengan posisi relative (menggunakan properti top, left, right, bottom), ruang yang ditempati oleh elemen tersebut masih ada
+  - ketika kita menggerakkan elemen dengan posisi relative, elemen akan bergerak relatif terhadap posisi semula-nya
+  - jika kita memberi properti top: 0; dan left: 0; maka elemen tidak berubah posisinya
+
+27. Position absolute & fixed:
+- position: absolute; adalah ketika kita menggerakkan elemen dengan posisi absolute (menggunakan properti top, left, bottom, right), ruang yang ditempati oleh elemen tersebut dianggap tidak ada
+- ketika kita menggerakkan elemen dengan posisi absolute, elemen akan bergerak relatif terhadap posisi dari elemen parentnya, selama elemen parentnya memiliki posisi yang juga non-static (parent terdekat)
+- pada contoh ini div dengan class dua parentnya body
+- div dua keluar container karena beda dimensi, solusinya buat containernya menjadi 1 dimensi dengan div dua dengan membuat valuenya menjadi non-static dengan memberi relative
+- jika kita memberi properti top: 0; dan left: 0; maka elemen akan berada di ujung kiri atas dari element parentnya
+- position: fixed; adalah (cuma peduli window browser dan terkunci)
+- next materi z index : mengatur tumpukan elemen-elemen yang diberi properti non-static
+
+28. Z-index & penggunaan lain dari position:
+- buat ngatur tumpukkan elemen dengan properti non-static, perilakunya elemen html terbawah berarti paling depan, contoh sintaks -> z-index: 999; (paling besar berarti terdepan), z-index: -999; (paling kecil berarti terbelakang)
+- menggunakan proerti top right bottom left pada position non-static
+
+29. Position kuliah bareng:
+- 3 yang harus diperhatikan sebelum buat web : box model, float, position
+- review float : elemen display cuma 2 yaitu block & inline, block ketemu block = atas bawah, block ketemu inline = atas bawah, inline ketemu block img ketemu h3 = h3 dibawah karena block menghabiskan tempat mau sekecil apapun, kalau img ketemu img = bersebelahan. Semua itu disebut normal flow. analoginya seperti reverse tetris
+- float + position = membuat flow halaman kita keluar dari normal flow (overflow)
+- float bisa bikin elemen jadi diatas kiri & kanan, sedangkan position bebas
+- position : static, non-static (absolute, relative, fixed)
+- relative jarang buat geser-geser seringnya absolute
+- default absolute atas kiri
+- pakai relative cuma buat maju ga pindah pindah, pindah pakai absolute, cocok di kombinasi absolute dulu baru relative
+- absolute mengabaikan margin auto, makanya di kiri tengah ga pas tengah
+- absolute melayang tempat sisa diisi, kalau relative ga diisi maju doang. Absolute top 0 left 0 akan berada di atas kiri pembungkus selama pembungkusnya non-static
+- fixed mirip absolute, bedanya tetap dan fixed mengabaikan pembungkus non-static akan selalu ke body html
+- studi kasus ubah dari fixed ke absolute pada saat mencapai ketinggian tertentu jadi absolute pakai js
+- perilaku html : semakin bawah elemen, semakin depan
+- z-index : x horizontal y vertical z keluar dari layar (3d) semakin besar nilai z semakin depan mendekati kita
+- tiap elemen punya z-index tapi kita gatau berapa yang kita tahu yang paling terakhir/bawah nilainya lebih besar dari elemen sebelumnya
+- z-index hanya berlaku untuk elemen non-static
+- kalau bentuk selain kotak bisa ngga pakai css? Bisa ngakalin dari kotak
+- kasih top 0 bottom 0 ke elemen yang ga punya ukuran kaya karet ditarik sampai mentok begitu juga semuanya top 0 right 0 bottom 0 left 0
+- parallax
+
+30. Position latihan:
+- ribbon
+
+CSS3:
+31. Intro:
+- css3 : generasi ketiga dari spesifikasi css yang direkomendasikan oleh w3c (source : wikipedia css)
+- perbedaan dengan generasi sebelumnya
+- css3 dibagi menjadi beberapa modul dan tiap modulnya menambahkan kemampuan / fitur yang ada di css2
+- css3 modules di w3c, ga belajar semua, yang penting / sering dipakai saja
+- kenapa css3?
+  - membuat website menjadi lebih fleksibel
+  - membuat mock up dengan cepat tanpa bantuan bahasa scripting
+  - mengurangi penggunaan gambar = kecepatan load halaman
+  - penggunaan selector untuk menghindari penggunaan markup yang boros
+- sebelum css3, manual pakai photoshop kalau mau bikin corner menjadi tumpul
+- dengan css3
+- property css3 yang sering digunakan (source: quackit css3 properties)
+- ada beberapa property yang hanya berjalan di browser tertentu
+- browser support
+- untuk mengatasinya kita harus menambahkan vendor-prefixes
+- vendor-prefixes : webkit, moz, ie, o
+- kenapa harus ditambahkan? karena tiap browser memiliki karakteristik yang berbeda, tujuannya untuk menulis kode yang berjalan di hampir semua browser
+
+32. border radius
+This video is a tutorial on the CSS3 border-radius property, which is used to make the corners of an element rounded. The key points from the video are:
+  - Basic Usage: The border-radius property makes the corners of a box-like element rounded. A larger border-radius value results in a more rounded corner [00:00:37].
+  - Creating a Circle or Ellipse:
+      - To create a perfect circle from a square element, set the border-radius value to 50% or half of the element's width and height [00:02:46].
+      - If the element is rectangular (not a square), using a border-radius of 50% will create an oval or elliptical shape [00:03:37].
+  - Targeting Individual Corners: You can apply border-radius to specific corners using properties like border-top-right-radius, border-bottom-left-radius, etc. [00:04:17]. Alternatively, you can use the shorthand border-radius property with four values, which are applied in the order of top-left, top-right, bottom-right, and bottom-left [00:05:06].
+  - Handling Content Overflow: When a div has a border-radius, content such as text or images that extends beyond the original square boundary will become visible outside the rounded corners [00:01:30]. To prevent this, you can use the overflow: hidden property on the container div to hide any content that goes beyond the rounded edges [00:07:37].
+  - Using with Background Images: When a background image is applied to a div with a border-radius, the image automatically conforms to the shape, acting like a frame [00:05:46].
+
+33. opacity
+- opacity children gabisa solid karena nurunin sifat parentnya, solusi pakai RGBa & HSLa
+
+34. RGBa & HSLa
+- /* background-color: rgba(255, 102, 0, 0.5); */
+  background-color: hsla(24, 100%, 68%, 0.5);
+
+35. box-shadow
+- Pengertian: Properti box-shadow digunakan untuk memberikan bayangan pada sebuah elemen HTML (seperti div, p, atau section), yang bisa memberikan kesan kedalaman atau dimensi pada halaman web.
+- Parameter Dasar: Ada lima nilai utama yang bisa diberikan pada properti ini:
+- offset-x: Mengatur posisi horizontal bayangan. Nilai positif menggeser bayangan ke kanan, dan negatif ke kiri.
+- offset-y: Mengatur posisi vertikal bayangan. Nilai positif menggeser bayangan ke bawah, dan negatif ke atas.
+- blur-radius: Mengatur tingkat keburaman bayangan. Semakin besar nilainya, semakin buram bayangannya.
+- spread-radius: Mengontrol ukuran bayangan. Nilai positif akan memperluas bayangan, sedangkan nilai negatif akan mengecilkannya.
+- color: Menentukan warna dari bayangan.
+- Efek inset: Parameter inset digunakan untuk mengubah bayangan dari luar (default) menjadi bayangan di dalam elemen, menciptakan efek cekung.
+- Multiple Shadows: Anda dapat menerapkan lebih dari satu bayangan pada satu elemen dengan menuliskan beberapa set nilai box-shadow yang dipisahkan dengan koma. Ini memungkinkan pembuatan efek bayangan yang kompleks, seperti bayangan bertingkat atau bayangan 3D.
+- Penggunaan untuk Desain: Dengan kombinasi parameter yang tepat, box-shadow dapat digunakan untuk membuat berbagai efek visual, seperti efek 3D, efek melayang, atau bahkan meniru tampilan border.
+
+36. text shadow
+- Pengertian: Properti text-shadow digunakan untuk menambahkan efek bayangan pada teks, membuatnya lebih menonjol atau memberikan kesan 3D.
+- Parameter Dasar: Properti ini menerima hingga empat nilai, yaitu:
+- offset-x: Mengatur posisi bayangan secara horizontal (ke kanan atau kiri).
+- offset-y: Mengatur posisi bayangan secara vertikal (ke bawah atau atas).
+- blur-radius: Mengontrol tingkat keburaman bayangan. Nilai yang lebih tinggi membuat bayangan lebih halus.
+- color: Menentukan warna bayangan.
+- Cara Penggunaan: Format penulisannya adalah text-shadow: offset-x offset-y blur-radius color;.
+- Efek Unik: Anda dapat membuat beberapa bayangan sekaligus pada satu teks dengan memisahkan setiap set parameter dengan koma. Ini memungkinkan pembuatan efek bayangan yang kompleks, seperti bayangan bertingkat atau bayangan ganda.
+- Kompatibilitas: Properti ini didukung oleh sebagian besar browser modern tanpa perlu vendor prefixes.
+
+37. linear gradient
+- Pengertian: linear-gradient adalah cara untuk membuat transisi warna yang bertahap dalam garis lurus.
+- Penggunaan: linear-gradient bukanlah properti CSS, melainkan sebuah nilai yang diberikan kepada properti background-image [02:39].
+- Sintaks Dasar:
+  - Sintaks paling sederhana membutuhkan setidaknya dua warna: warna awal dan warna akhir, dipisahkan dengan koma.
+  - Anda bisa menambahkan lebih dari dua warna untuk menciptakan transisi yang lebih kompleks [04:50].
+- Mengontrol Arah:
+  - Secara default, gradien mengalir dari atas ke bawah [05:45].
+  - Arah gradien dapat diubah menggunakan kata kunci seperti to right, to left, to top, atau to bottom [06:57]. Anda juga bisa menggunakan sudut dalam derajat (misalnya, 90deg untuk gradien horizontal) [06:11].
+- Color Stops:
+  - Color stops digunakan untuk mengontrol di mana sebuah warna akan berhenti transisinya [08:14].
+  - Anda bisa menentukan lokasi setiap warna dengan persentase (misalnya, red 63%) untuk mengontrol alur gradien secara lebih spesifik [09:09].
+
+38. radial gradient
+- Sintaks & Pengertian: radial-gradient adalah nilai yang digunakan untuk properti background-image yang berfungsi untuk membuat gradasi warna melingkar atau elips. Anda harus menyertakan setidaknya dua warna, yaitu warna awal dan warna akhir, untuk membuat gradien dasar [01:15].
+- Menggunakan Color Stops: Anda bisa mengontrol transisi warna dengan menambahkan color stops menggunakan nilai persentase atau piksel. Ini memungkinkan Anda menentukan seberapa jauh setiap warna akan menyebar dari pusat [02:31].
+- Mengatur Bentuk (shape):
+  - Secara default, gradien akan berbentuk elips (ellipse) [04:41].
+  - Anda bisa mengubahnya menjadi lingkaran sempurna dengan nilai circle [04:41].
+- Mengatur Ukuran & Posisi:
+  - Ukuran gradien dapat diatur menggunakan kata kunci seperti closest-side, farthest-side, closest-corner, atau farthest-corner [05:20]. Nilai-nilai ini menentukan seberapa besar lingkaran gradien berdasarkan jarak dari pusat ke sisi atau sudut terdekat/terjauh elemen.
+  - Anda juga bisa memindahkan posisi pusat gradien menggunakan kata kunci at diikuti dengan posisi (misalnya, at top left) atau nilai piksel [09:37].
+-Meskipun radial-gradient tidak sepopuler linear-gradient, properti ini sangat berguna untuk membuat efek visual yang menarik dan unik.
+
+39. font face
+  * **Pengertian**: Properti `@font-face` memungkinkan Anda menggunakan **font kustom** di halaman web yang tidak terinstal di komputer pengguna. Ini memberikan kebebasan lebih dalam desain visual, berbeda dengan font standar seperti Arial atau Times New Roman.
+  * **Sintaks Dasar**: Untuk menggunakan `@font-face`, Anda perlu mendefinisikan setidaknya dua properti di dalam bloknya:
+      * `font-family`: Nama yang Anda berikan untuk font kustom tersebut (misalnya, 'MyCustomFont'). Nama ini akan digunakan saat memanggil font di properti `font-family` pada elemen CSS.
+      * `src`: Lokasi file font. Anda bisa menggunakan URL eksternal atau path relatif ke file font Anda.
+  * **Kompatibilitas Format Font**: Untuk memastikan font dapat diakses oleh berbagai browser, disarankan untuk menyertakan beberapa format file font yang berbeda:
+      * `woff2` & `woff` (Web Open Font Format): Format yang paling direkomendasikan saat ini karena ukurannya kecil dan memiliki dukungan luas.
+      * `ttf` (TrueType) & `otf` (OpenType): Format font lama yang masih banyak digunakan.
+      * `eot` (Embedded OpenType): Khusus untuk browser Internet Explorer.
+  * **Cara Menggunakan Font**: Setelah font didefinisikan dengan `@font-face`, Anda bisa menggunakannya pada elemen HTML dengan memanggil nama yang telah Anda tentukan di properti `font-family`, misalnya:
+    ```css
+    h1 {
+      font-family: 'MyCustomFont', sans-serif;
+    }
+    ```
+    Menambahkan font cadangan (`sans-serif`) di belakang nama font kustom sangat disarankan sebagai *fallback* jika font utama gagal dimuat.
+
+40. web font generator
+* **Mengunduh dari Font Squirrel**: Video ini menunjukkan cara mendapatkan font web dari Font Squirrel, sebuah situs web yang menyediakan "web font kit" untuk banyak fontnya [[00:27](http://www.youtube.com/watch?v=CP49khK4TdY&t=27)]. Kit ini dapat diunduh dan berisi file yang diperlukan untuk sintaks `@font-face`.
+* **Format File WOFF**: Video ini merekomendasikan penggunaan format file WOFF (Web Open Font Format) karena format ini dioptimalkan untuk web dan memuat lebih cepat daripada format lain seperti TTF atau OTF [[02:27](http://www.youtube.com/watch?v=CP49khK4TdY&t=147)]. WOFF dibuat oleh Mozilla khusus untuk situs web [[02:37](http://www.youtube.com/watch?v=CP49khK4TdY&t=157)].
+* **Alat Web Font Generator**: Video ini menyoroti alat web font generator dari Font Squirrel, yang dapat mengonversi file TTF atau OTF menjadi format WOFF untuk pemuatan yang lebih cepat [[02:55](http://www.youtube.com/watch?v=CP49khK4TdY&t=175)]. Alat ini sangat berguna untuk font yang belum memiliki kit web font.
+* **Cara Menggunakan Generator**: Untuk menggunakan generator, Anda perlu mengunggah file font Anda dan memilih pengaturan yang diinginkan, seperti "Optimal" [[03:32](http://www.youtube.com/watch?v=CP49khK4TdY&t=212)]. Alat ini kemudian akan membuat kit font web baru yang bisa Anda unduh, termasuk file WOFF dan file CSS yang siap digunakan [[03:58](http://www.youtube.com/watch?v=CP49khK4TdY&t=238)].
+* **Menerapkan Font**: Video ini menunjukkan cara menyalin kode CSS yang dihasilkan dan file font WOFF ke dalam folder proyek Anda. Anda kemudian dapat mengganti font yang ada di CSS Anda dengan yang baru untuk menerapkan perubahan [[04:18](http://www.youtube.com/watch?v=CP49khK4TdY&t=258)]. Video ini menggunakan contoh konversi font "Alex Brush" dari TTF ke WOFF dan menunjukkan hasil akhirnya [[04:32](http://www.youtube.com/watch?v=CP49khK4TdY&t=272)].
+
+41. vendor prefix
+* **Apa itu Vendor Prefixes?**
+    * Vendor prefixes adalah sintaks khusus yang ditambahkan pada beberapa properti CSS3 untuk memastikan kompatibilitas di berbagai browser [[00:19](http://www.youtube.com/watch?v=aAwDhYmn5Q0&t=19)].
+    * Istilah "prefix" merujuk pada awalan yang ditambahkan pada properti CSS3 yang belum didukung oleh browser tertentu [[01:07](http://www.youtube.com/watch?v=aAwDhYmn5Q0&t=67)].
+    * Istilah "vendor" merujuk pada browser yang bersangkutan [[01:14](http://www.youtube.com/watch?v=aAwDhYmn5Q0&t=74)].
+* **Sintaks dan Penggunaan**
+    * Sintaksnya melibatkan penambahan awalan tertentu sebelum properti CSS:
+        * `-webkit-`: Digunakan untuk Chrome, Safari, dan versi baru Opera [[02:35](http://www.youtube.com/watch?v=aAwDhYmn5Q0&t=155)].
+        * `-moz-`: Digunakan untuk Firefox [[02:40](http://www.youtube.com/watch?v=aAwDhYmn5Q0&t=160)].
+        * `-ms-`: Digunakan untuk Internet Explorer [[02:42](http://www.youtube.com/watch?v=aAwDhYmn5Q0&t=162)].
+        * `-o-`: Digunakan untuk versi lama Opera [[02:45](http://www.youtube.com/watch?v=aAwDhYmn5Q0&t=165)].
+    * Anda perlu menambahkan semua awalan yang relevan jika ingin CSS Anda berfungsi di semua browser [[02:49](http://www.youtube.com/watch?v=aAwDhYmn5Q0&t=169)].
+* **Mengapa Vendor Prefixes Dibutuhkan?**
+    * Tidak semua browser saat ini mendukung properti CSS3 [[01:55](http://www.youtube.com/watch?v=aAwDhYmn5Q0&t=115)].
+    * Beberapa properti yang dulunya membutuhkan awalan, seperti `border-radius`, `box-shadow`, dan `text-shadow`, sekarang sudah didukung oleh semua browser dan tidak lagi memerlukannya [[02:08](http://www.youtube.com/watch?v=aAwDhYmn5Q0&t=128)].
+* **Contoh: Properti `filter`**
+    * Video ini menggunakan properti `filter` sebagai contoh. Awalnya, properti ini berfungsi di Firefox tetapi tidak di Google Chrome [[04:37](http://www.youtube.com/watch?v=aAwDhYmn5Q0&t=277)].
+    * Untuk membuat properti `filter` berfungsi di Chrome, awalan `-webkit-` ditambahkan ke kode CSS, yang kemudian membuat properti tersebut berfungsi dengan benar di Chrome [[04:59](http://www.youtube.com/watch?v=aAwDhYmn5Q0&t=299)].
+* **Cara Mengetahui Awalan Mana yang Digunakan**
+    * **shouldiprefix.com**: Situs web ini membantu Anda mencari tahu properti CSS mana yang membutuhkan vendor prefix [[06:06](http://www.youtube.com/watch?v=aAwDhYmn5Q0&t=366)]. Properti yang disorot dengan warna biru memerlukan awalan, sedangkan yang berwarna hijau tidak [[06:25](http://www.youtube.com/watch?v=aAwDhYmn5Q0&t=385)].
+    * **caniuse.com**: Situs ini memberikan informasi lebih komprehensif tentang status dukungan properti CSS dan HTML [[06:47](http://www.youtube.com/watch?v=aAwDhYmn5Q0&t=407)]. Warna merah menunjukkan tidak ada dukungan, kuning menunjukkan dukungan sebagian, dan hijau menunjukkan dukungan penuh [[07:13](http://www.youtube.com/watch?v=aAwDhYmn5Q0&t=433)].
+    * **Autoprefixer**: Video ini menyebutkan sebuah situs web (`pleeease.io`) dan plugin Emmet yang dapat secara otomatis menambahkan vendor prefixes yang diperlukan ke kode CSS Anda [[07:52](http://www.youtube.com/watch?v=aAwDhYmn5Q0&t=472)].
+* **Kesimpulan**
+    * Tujuan utama menggunakan vendor prefixes adalah untuk memastikan sintaks CSS3 Anda kompatibel dengan semua browser [[10:44](http://www.youtube.com/watch?v=aAwDhYmn5Q0&t=644)].
+    * Disarankan untuk menguji situs web Anda di browser populer seperti Google Chrome, Firefox, Safari, dan Internet Explorer untuk memastikan tampilan yang normal bagi semua pengguna [[10:52](http://www.youtube.com/watch?v=aAwDhYmn5Q0&t=652)].
+
+42. filter
+* **Pengertian**: Properti **`filter`** digunakan untuk menerapkan efek visual pada elemen, seperti mengubah warna, memberikan efek buram, atau menyesuaikan kecerahan.
+* **Fungsi Filter yang Sering Digunakan**:
+    * **`blur()`**: Membuat gambar atau elemen menjadi buram. Nilainya ditentukan dalam piksel (misalnya, `blur(5px)`).
+    * **`grayscale()`**: Mengubah warna elemen menjadi skala abu-abu. Nilai ditentukan dalam persentase (misalnya, `grayscale(100%)`).
+    * **`sepia()`**: Memberikan efek sepia (kekuningan) pada elemen, menciptakan tampilan vintage. Nilai ditentukan dalam persentase.
+    * **`saturate()`**: Menyesuaikan saturasi warna elemen. Nilai `100%` adalah normal, `0%` adalah desaturasi total, dan nilai di atas `100%` akan meningkatkan saturasi.
+    * **`brightness()`**: Mengatur kecerahan elemen. Nilai `1` adalah normal, `0` adalah hitam total, dan nilai di atas `1` akan membuatnya lebih cerah.
+    * **`contrast()`**: Menyesuaikan kontras elemen. Nilai `1` adalah normal, `0` adalah abu-abu total, dan nilai di atas `1` akan meningkatkan kontras.
+    * **`hue-rotate()`**: Mengubah warna elemen dengan memutar `hue` (rona) dalam derajat (misalnya, `hue-rotate(90deg)`).
+    * **`invert()`**: Membalikkan warna elemen. Nilai `1` atau `100%` akan membalikkan warna sepenuhnya.
+* **Kombinasi Filter**: Anda bisa menggabungkan beberapa fungsi filter pada satu elemen dengan menuliskannya secara berurutan. Contohnya: `filter: grayscale(100%) blur(5px);`.
+* **Penggunaan Umum**: Properti `filter` sering digunakan untuk memberikan efek interaktif pada gambar, misalnya saat `hover` untuk membuat gambar menjadi hitam-putih.
+* **Perbedaan dengan Properti Lain**: Penting untuk membedakan `filter: opacity()` dengan properti `opacity`. `filter: opacity()` membuat elemen transparan **tanpa memengaruhi properti `box-shadow` atau `text-shadow`**, sedangkan properti `opacity` membuat **seluruh elemen** (termasuk bayangannya) menjadi transparan.
+
+43. transform
+* **Pengertian**: Properti **`transform`** digunakan untuk mengubah tampilan visual elemen HTML, seperti memindahkan, memutar, atau mengubah ukurannya, tanpa memengaruhi tata letak elemen di sekitarnya.
+* **Fungsi Transformasi Utama**:
+    * `translate()`: Memindahkan elemen dari posisi aslinya. Anda bisa menggeser elemen secara horizontal (`translateX`), vertikal (`translateY`), atau keduanya (`translate(x, y)`).
+    * `rotate()`: Memutar elemen pada sumbu 2D. Nilainya menggunakan satuan derajat (misalnya, `rotate(45deg)`).
+    * `scale()`: Mengubah ukuran elemen. Nilai lebih besar dari `1` akan memperbesar, dan nilai lebih kecil dari `1` akan mengecilkan. Anda bisa mengontrol lebar (`scaleX`) atau tinggi (`scaleY`) secara terpisah.
+    * `skew()`: Mendistorsi atau memiringkan elemen. Nilainya menggunakan satuan derajat (`skewX` untuk horizontal, `skewY` untuk vertikal, atau `skew(x, y)` untuk keduanya).
+* **Transformasi 3D**:
+    * Properti `transform` juga mendukung transformasi 3D pada sumbu Z, seperti `rotateZ()`, `translateZ()`, dan `scaleZ()`.
+    * Untuk menggunakan transformasi 3D, Anda perlu menambahkan properti `transform-style: preserve-3d;` pada elemen induk.
+* **Gabungan Transformasi**: Anda dapat menggabungkan beberapa fungsi transform sekaligus pada satu elemen, misalnya: `transform: rotate(45deg) scale(1.2);`. Urutan penulisan sangat penting karena akan memengaruhi hasil akhirnya.
+
+44. transition
+* **Pengertian**: Properti **`transition`** digunakan untuk membuat efek animasi yang halus saat perubahan nilai pada sebuah properti CSS terjadi, bukan perubahan yang instan. Biasanya digunakan pada elemen yang berinteraksi dengan pengguna, seperti saat di-`hover`.
+* **Sifat Properti Transisi**:
+    * **`transition-property`**: Menentukan properti CSS mana yang akan dianimasikan (misalnya, `width`, `height`, `background-color`). Anda bisa menggunakan kata kunci `all` untuk semua properti.
+    * **`transition-duration`**: Menentukan durasi animasi dari awal hingga akhir. Nilainya menggunakan detik (s) atau milidetik (ms).
+    * **`transition-timing-function`**: Mengontrol kecepatan animasi sepanjang durasi. Beberapa nilai yang umum adalah `ease` (mulai pelan, lalu cepat, dan melambat di akhir), `linear` (kecepatan konstan), `ease-in` (mulai pelan), `ease-out` (melambat di akhir), dan `ease-in-out` (mulai dan berakhir pelan).
+    * **`transition-delay`**: Menunda animasi selama durasi tertentu sebelum dimulai.
+* **Properti Shorthand**: Anda bisa menggabungkan keempat properti di atas ke dalam satu baris menggunakan properti shorthand **`transition`**. Format penulisannya adalah `transition: [property] [duration] [timing-function] [delay];`. Contohnya: `transition: background-color 0.5s ease-in-out;`.
+* **Penggunaan Praktis**: `transition` biasanya diterapkan pada properti awal elemen, dan perubahan properti yang dianimasikan ditempatkan di dalam pseudo-class seperti `:hover` atau `:focus`.
+* **Kombinasi Transisi**: Anda bisa menerapkan transisi pada lebih dari satu properti dengan memisahkan setiap set properti dengan koma. Contohnya: `transition: width 0.5s ease, height 0.5s ease;`.
+
+45. animation
+* **Perbedaan `animation` dan `transition`**: Properti **`animation`** memungkinkan Anda membuat animasi yang lebih kompleks dan dapat berjalan secara otomatis, berbeda dengan `transition` yang hanya menggerakkan perubahan properti dari satu keadaan ke keadaan lain.
+* **Properti Kunci `@keyframes`**:
+    * Animasi didefinisikan terlebih dahulu menggunakan **`@keyframes`**. Ini adalah aturan yang menetapkan alur perubahan properti pada titik-titik tertentu dalam siklus animasi.
+    * Anda dapat menggunakan kata kunci `from` dan `to` untuk menentukan awal dan akhir animasi, atau menggunakan persentase (`0%`, `50%`, `100%`) untuk kontrol yang lebih detail.
+* **Properti Animasi Utama**:
+    * **`animation-name`**: Memanggil nama animasi yang telah Anda buat dengan `@keyframes`.
+    * **`animation-duration`**: Menentukan durasi total animasi.
+    * **`animation-timing-function`**: Mengatur kecepatan animasi (misalnya, `ease`, `linear`, `ease-in`).
+    * **`animation-delay`**: Menentukan waktu tunda sebelum animasi dimulai.
+    * **`animation-iteration-count`**: Mengatur berapa kali animasi akan diulang. Nilai `infinite` akan membuatnya berjalan terus-menerus.
+    * **`animation-direction`**: Menentukan arah animasi, seperti `normal`, `reverse`, atau `alternate`.
+* **Penggunaan Shorthand**: Semua properti di atas dapat disatukan dalam satu baris menggunakan properti shorthand `animation`. Format penulisannya adalah `animation: [name] [duration] [timing-function] [delay] [iteration-count] [direction] [fill-mode];`.
+* **Kompatibilitas**: Untuk memastikan animasi berfungsi di berbagai browser, Anda mungkin perlu menggunakan vendor prefixes seperti `-webkit-` pada `@keyframes` dan properti `animation`.
+
+46. project
+* **Penggunaan Properti `float`**:
+    * Properti `float` digunakan untuk memosisikan sebuah elemen ke sisi kiri atau kanan dari `container`-nya.
+    * Elemen yang diberi `float` akan keluar dari aliran dokumen normal, memungkinkan elemen lain untuk "mengalir" di sekelilingnya. Ini sering digunakan untuk membuat elemen berdampingan, seperti navigasi atau kolom.
+    * Nilai yang paling sering digunakan adalah `float: left;` dan `float: right;`.
+* **Pentingnya `clearfix`**:
+    * Salah satu masalah utama dari penggunaan `float` adalah elemen induk (`container`) akan "runtuh" atau tidak bisa menampung elemen yang di-`float`, karena elemen tersebut keluar dari aliran normal.
+    * Untuk mengatasi hal ini, digunakan teknik **`clearfix`**. `Clearfix` adalah sebuah "hack" CSS yang menambahkan `pseudo-element ::after` pada elemen induk.
+    * Properti `clear: both;` pada `pseudo-element` ini memaksa elemen induk untuk "membersihkan" efek `float` dan menyesuaikan tingginya agar bisa menampung semua elemen di dalamnya.
+* **Penerapan dalam Proyek Layout**:
+    * **Header**: Buat bagian `header` untuk judul situs.
+    * **Navigasi**: Buat navigasi dengan menggunakan `list` (`<ul>` dan `<li>`) dan terapkan `float: left;` pada setiap `<li>` agar menu tampil secara horizontal. Pastikan `container` navigasi menggunakan `clearfix`.
+    * **Konten**: Bagi bagian konten utama menjadi beberapa kolom, misalnya `aside` untuk *sidebar* dan `main` untuk isi utama, dan gunakan `float` pada keduanya.
+    * **Footer**: Selalu tempatkan `footer` di akhir dan pastikan properti `clear: both;` diterapkan padanya untuk mencegahnya mengganggu atau terpengaruh oleh `float` di bagian atasnya.
+* **Kesimpulan**: Kombinasi dari properti `float` untuk penataan posisi dan teknik `clearfix` untuk mengatasi masalah aliran dokumen adalah cara dasar yang efektif untuk membuat struktur layout halaman web yang sederhana.
+
+Tailwind CSS:
+Intro:
+
+
+basic programming with js
+
+what is programming?
+
+programming language
+
+compiler & interpreter
+
+why learn js?
+
+js history
+
+js IDE: VSCode & browser
+
+what is value & data type
+
+data type in js: number, string, boolean
+
+operator in js: aritmathics, assignment, comparison, logic, string, typeof conditional
+
+variable in js
+
+writing js
+
+pop up box in js: alert, prompt, confirm
+
+control flow in js: looping & conditioning
+  SEARCHING TABLE is a "Lookup table" usually refers to a data structure or algorithm used to find (search for) a specific value in a table (such as an array, list, or database table). In programming, a lookup table can mean:
+  Linear Search: Scanning each element in a table/array until the desired value is found.
+  Binary Search: Efficiently searching a sorted table/array by repeatedly dividing the search interval in half.
+  Lookup Table: A table used to quickly retrieve values ​​based on a key.
+
+looping in js: while, searching table, for
+
+conditioning in js: if else, else if, switch
+
+nested loop & nested condition in js
+
+function in js: 
+  intro: method, class, constructor, module. first-class object, built-in & user define function. DRY, dekomposisi/abstraksi, modularity, 
+  user defined function, 
+  function declaration vs expression: declaration: function indentifier(parameterList *opt) {functionBody}, expression: function identifier *opt(parameterList *opt) {functionBody}, what's different? declaration: flexible because hoisting concept, expression: powerful (closure, argument for other function, IIFE), must declare first before call it
+  parameter/argument: If the parameters and arguments do not match each other (e.g. fewer parameters, more arguments), then the larger one is ignored, parameter > argument, then the larger parameter = undefined, 
+  return value, 
+  scope: block scope vs function scope, js is function scope, 
+  refactoring: readabality. dry, testability, performance, maintainability, 
+  hoisting, 
+  closure, 
+  recursion/recursive: function that call their self. 
+
+array in js: 
+  intro, 
+  create array, 
+  array manipulation, 
+  slice & splice, 
+  forEach & map, 
+  filter & find, 
+  etc. 
+- variabel sakti, mampu menyimpan banyak tipe data
+- let hari = ["senin", "selasa", "rabu"]
+- memudahkan pengambilan data & hemat memory
+- array di js bertipe object
+- .length
+let binatang = [];
+binatang = ["kucing", "kelinci", "monyet", "panda", "koala", "sapi"];
+console.log(binatang.length);
+- index
+- elemen array boleh beda tipe & multidimensional
+let myArr3 = ["teks", 2, false, myFunc, [4, 5, 6]];
+console.log(myArr3[4][1]);
+// output: 5
+
+Manipulasi array
+- tambah
+let arr = ["a", 1, true];
+console.log(arr[1]);
+// atau
+let arr = [];
+arr[0] = "Muhhamad";
+arr[1] = "Ricky";
+arr[2] = "Yusuf";
+arr[6] = "Ucup";
+console.log(arr);
+// 3 index yang bolong = undefined
+- hapus
+let arr = ["m", "r", "y"];
+arr[1] = undefined;
+console.log(arr);
+- tampilkan
+let arr = ["m", "r", "y"]; 
+for(let i = 0; i < arr.length; i++) {
+console.log(`Mahasiswa ke-${i+1}: ${arr[1]}`);
+}
+- method pada array
+- length
+- join -> menampilkan rapih dalam bentuk string
+let arr = ["Riska", "Ricky", "Rifda"];
+console.log(arr.join(" - "));
+- push -> menambahkan elemen di akhir, bisa jamak
+arr.push("Riza", "Rizky");
+- pop -> menghapus elemen di akhir, 1 per 1
+arr.pop();
+arr.pop();
+- unshift -> sama seperti push & pop, unshift menambahkan elemen di awal
+arr.unshift("Ruby");
+- shift -> sama seperti push & pop, unshift menghapus elemen di awal
+arr.shift();
+- shift & pop benar-benar menghapus bukan merubah ke undefined
+- splice -> mengambil beberapa array menjadi bagian baru
+// splice(indexAwal, mauDihapusBerapa, elemenBaru1, elemenBaru2, ...)
+let arr = ["Yanto", "Yusuf", "Yura"];
+/*arr.splice(2, 0, "Yudi", "Yuta");
+console.log(arr.join(" - "));*/
+arr.splice(1, 2, "Replaced");
+console.log(arr.join(" - "));
+- slice -> menyambung/menambal 
+let arr = ["Yanto", "Yusuf", "Yura", "Yuta", "Yuni"];
+// slice(awal, akhir);
+// index awal akan terbawa di array yang baru, tapi index akhir tidak
+// array lama masih bisa di akses
+let arr2 = arr.splice(1, 3);
+console.log(arr.join(" - "));
+console.log(arr2.join(" - "));
+// kedua method ini untuk melakukan looping pada array
+- forEach
+// untuk setiap elemen pada array angka, lakukan function e
+/*let angka = [1, 2, 3, 4, 5, 6, 7, 8];
+angka.forEach(function(e) {
+console.log(e);
+});
+let cetak = function(e) {
+console.log(e);
+}
+angka.forEach(cetak);*/
+// mengakses index elemen array
+let nama = ["Irfan", "Kevin", "Reido"];
+nama.forEach(function(e, i)) {
+console.log(`Mahasiswa ke-${i} adalah ${e}`);
+}
+- map -> sama seperti forEach, tapi lebih baik, karena mengembalikkan array
+/*let angka = [1, 2, 5, 3, 6, 8, 4];
+let angka2 = angka.map(function(e) {
+return e * 2;
+});
+console.log(angka2.join(" - "));*/
+- sort -> mengurutkan array
+// hati2 bila ada angka > 9, karena diurut berdasarkan karakter pertama, solusinya adalah menambahkan function perbandingan angka
+/*let angka = [1, 2, 10, 5, 20, 3, 6, 8, 4];
+// console.log(angka.join(" - "));
+angka.sort(function(a, b) {
+return a-b;
+});
+console.log(angka.join(" - "));*/
+// method untuk mencari elemen array
+- filter -> mengembalikkan banyak nilai
+let angka = [1, 2, 10, 5, 20, 3, 6, 8, 4];
+let angka2 = angka.filter(function(x) {
+// return x == 5;
+return x > 5;
+});
+console.log(angka2.join(" - "));
+- find -> mengembalikkan 1 nilai (tidak menghasilkan array tapi nilai)
+let angka = [1, 2, 10, 5, 20, 3, 6, 8, 4];
+let angka2 = angka.find(function(x) {
+// return x == 5;
+return x > 5;
+});
+console.log(angka2);
+- dll, dokumentasi di mozilla
+
+object in js: 
+  intro, 
+  create object, 
+  this, 
+Object
+- array yang lebih sakti
+- object = tipe data, array juga merupakan tipe data object, tidak ada yang namanya tipe data array
+- kumpulan nilai/elemen yang memiliki nama, kalau array index
+- kita menggunakan object untuk menampung nilai yang banyak dan jamak
+let mahasiswa = {
+nama : "Ricky Yusuf",
+lulus : true,
+IPSemester : [2.90, 3.10, 3.25, 2.88, 3.04],
+IPKumulatif : function() {
+let total = 0;
+let ips = this.IPSemester;
+for(let i = 0; < ips.length; i++) {
+total += ips[1];
+}
+return total/ips.length;
+}
+};
+mahasiswa.IPKumulatif();
+- anatomi object
+let orang = {
+// variabel di dalam object
+nama : "Ricky",
+usia : 19,
+pekerjaan : "Mahasiswa",
+// 3 variabel diatas merupakan property (variabel dalam object disebut property)
+sapa : function() {
+return `Hai! Nama saya ${nama}, usia saya ${usia} tahun, saya seorang ${pekerjaan}.`;
+}
+//function di dalam object disebut method
+};
+
+- membuat object
+// di vscode, permanen
+let mhs = {
+nama : "Yusuf",
+usia : 20,
+ipk : [4.00, 3.85],
+alamat : {
+jalan : "Jl. Example No. 123",
+kota : "Jakarta",
+provinsi : "Jawa Barat"
+}
+};
+mhs.ipk[1]
+mhs.alamat.kota
+// di console, tidak tersimpan
+mhs.nama = "Yusuf";
+mhs.nama
+- membuat object part 2: literal vs constructor dan cara memanggil / mengeksekusi object
+• Menggunakan object literal, function declaration, constructor function (keyword new), object.create() (object.create() dipelajari pasca belajar prototype)
+• Perbedaan:
+// object literal
+let mhs1 = {
+nama : "Cecep",
+nrp : "101111111",
+email : "example@gmail.com",
+jurusan : "Sistem informasi"
+};
+let mhs2 = {
+nama : "Ucup",
+nrp : "100000000",
+email : "example@gmail.com",
+jurusan : "Sistem komputer"
+};
+> mhs1
+> mhs2
+// function declaration
+function buatObjectMahasiswa(nama, nrp, email, jurusan) {
+let mhs = {};
+mhs.nama = nama;
+mhs.nrp = nrp;
+mhs.email = email;
+mhs.jurusan = jurusan;
+return mhs;
+}
+let mhsIsi1 = buatObjectMahasiswa("Ricky", 10124996, "contoh@gmail.com", "Sistem Informasi");
+let mhsIsi2 = buatObjectMahasiswa("Yusuf", "10129466", "contohkedua@gmail.com", "Sistem Komputer");
+> mhsIsi1
+// constructor (function yang dibuat khusus untuk membuat object)
+function Mahasiswa(nama, npm, kelas, jurusan) {
+// let this = {};
+this.nama = nama;
+this.npm = npm;
+this.kelas = kelas;
+this.jurusan = jurusan;
+// return this;
+}
+let mhs4 = new Mahasiswa("Nabila", "11122233", "1KA21", "DKV");
+> mhs4
+- keyword this: pahami dulu membuat dan memanggil object, karena membuat function object kita dihadapkan pada sebuah context/keadaan berbeda tergantung bagaimana cara kita membuat dan memanggil functionnya
+- review membuat object
+// function declaration
+function halo() {
+// let obj = {}; // hanya contoh jadi di komentar
+console.log(this);
+console.log("halo");
+}
+this.halo();
+- this menampilkan/mengembalikan object global
+// object literal
+let obj = {a : 10, nama : "ucup"};
+obj.halo = function() {
+console.log(this);
+console.log("halo");
+}
+obj.halo();
+- this mengembalikan object yang bersangkutan
+// constructor
+function Halo() {
+console.log(this);
+console.log("halo");
+}
+let obj1 = new Halo(); // this adalah obj1
+let obj2 = new Halo(); // this adalah obj2
+- this mengembalikan object yang baru dibuat (new membuat instance/copy)
+- ketiga cara menampilkan hal sama tapi context beda
+- pengertian this = keyword special yang secara otomatis didefinisikan pada setiap function/object, this = window (object global)
+- kalau kita menulis variable di scope global, berarti sama saja dia adalah property/method dari object window
+- perlu diingat apa yang dikembalikan this ketika kita memanggil function/objectnya dengan cara yang berbeda
+- prototype
+- pewarisan / inheritance
+
+angkot6.js
+// management angkot data
+- sopir
+- trayek
+- kas
+- penumpang
+- penumpang naik & turun
+/* sopir : ucup
+trayek : tanah abang - kota
+penumpang : kosong
+kas : Rp0 */
+// membuat object angkot
+function Angkot(sopir, trayek, penumpang, kas) {
+this.sopir = sopir;
+this.trayek = trayek;
+this.penumpang = penumpang;
+this.kas = kas;
+this.penumpangNaik = function(namaPenumpang) {
+this.penumpang.push(namaPenumpang);
+return this.penumpang;
+}
+this.penumpangTurun = function(namaPenumpang, bayar) {
+if(this.penumpang.length === 0) {
+alert("Angkot masih kosong!");
+return false;
+}
+for(let i = 0; i < this.penumpang.length; i++) {
+if(this.penumpang[i] == namaPenumpang) {
+this.penumpang[i] = undefined;
+this.kas += bayar;
+return this.penumpang;
+}
+}
+}
+}
+let angkot1 = new Angkot("Ucup", ["Tanah Abang", "Kota"], [], 0);
+let angkot2 = new Angkot("Pucu", ["Benhil", "Karet"], [], 0);
+> angkot1
+> angkot2
+> angkot1.penumpangNaik("Erik");
+> angkot1.penumpangNaik("Dodi");
+> angkot1.penumpang
+> angkot1.penumpangTurun("Erik", 5000);
+> angkot1.kas
+> angkot1.penumpangTurun("Dodi", 10000);
+> angkot1.kas
+> angkot2.kas
+
+DOM
+DOM (Document Object Model) adalah struktur pohon dari elemen-elemen HTML yang merepresentasikan halaman web sebagai objek-objek yang bisa diakses dan dimanipulasi dengan JavaScript.
+Cara mudah mengingat:
+🔹 HTML → jadi struktur pohon objek
+🔹 Setiap tag → jadi node/objek
+🔹 Bisa diubah pakai JavaScript (isi, gaya, event)
+DOM: Representasi struktur HTML sebagai objek JavaScript yang bisa dimanipulasi.
+catatan\_penting\_dom\_wpu.txt
+### Pengenalan DOM (Document Object Model)
+  - Definisi: DOM adalah antarmuka pemrograman untuk HTML. DOM merepresentasikan halaman web sebagai sebuah pohon hierarki (DOM Tree) yang setiap elemen HTML-nya diwakili sebagai objek dalam JavaScript. Hal ini memungkinkan JavaScript untuk mengakses dan memanipulasi elemen-elemen tersebut, sehingga membuat halaman web menjadi interaktif.
+  - Komponen Dasar DOM:
+      - Dokumen: Merujuk pada keseluruhan halaman web yang dimuat di browser.
+      - Objek: Elemen-elemen HTML (seperti \<h1\>, \<p\>, \<a\>) direpresentasikan sebagai tipe data objek di JavaScript, yang memiliki properti dan metode.
+      - Model: Merupakan representasi terstruktur dari dokumen. Model ini berbentuk seperti pohon (DOM Tree) yang menghubungkan setiap elemen (node) satu sama lain.
+### Hubungan DOM dengan JavaScript
+  - Penghubung: DOM bertindak sebagai jembatan antara JavaScript dan elemen HTML. Dengan DOM, JavaScript dapat:
+      - Mengubah isi (teks atau HTML) dari suatu elemen.
+      - Mengubah atribut (misalnya href pada tag \<a\>).
+      - Mengubah style (CSS) dari suatu elemen.
+      - Menambah atau menghapus elemen.
+      - Menangani interaksi pengguna (event handling) seperti klik atau hover.
+  - Objek window dan document:
+      - Objek window adalah objek global yang mewakili jendela browser secara keseluruhan.
+      - Objek document adalah bagian dari objek window yang khusus mengelola isi dari dokumen HTML. Kita akan lebih sering berinteraksi dengan objek document untuk memanipulasi elemen.
+### Topik Selanjutnya dalam Playlist
+  - Video ini merupakan pengenalan, dan seri video selanjutnya akan membahas topik-topik kunci yang sangat penting dalam manipulasi DOM:
+      - DOM Selection: Cara memilih atau mengakses elemen-elemen DOM dari dokumen.
+      - DOM Manipulation: Cara memanipulasi elemen HTML seperti menambah, menghapus, atau mengubah isinya.
+      - DOM Traversal: Cara menelusuri atau berpindah dari satu elemen ke elemen lain dalam DOM Tree.
+      - Event Handling: Cara melakukan perubahan pada DOM berdasarkan interaksi pengguna (misalnya, klik tombol atau gerakan mouse).
+
+### Materi: DOM Tree dan DOM Traversal
+DOM Tree adalah representasi visual dari struktur HTML sebuah halaman web. Setiap elemen HTML, atribut, dan teks di dalam dokumen direpresentasikan sebagai sebuah "simpul" atau **node** dalam pohon ini.
+* **Node**: Setiap bagian dari DOM Tree disebut node. Ada beberapa jenis node:
+    * **Element Node**: Representasi dari tag HTML (seperti `<body>`, `<h1>`, `<p>`).
+    * **Text Node**: Isi dari sebuah tag HTML, yaitu teks di dalamnya.
+    * **Attribute Node**: Atribut dari sebuah tag HTML (seperti `href` atau `class`).
+    * **Root Node**: Node teratas dari seluruh dokumen, yaitu `<html>`.
+### Hubungan Antar Node
+Penting untuk memahami hubungan antar node dalam DOM Tree untuk melakukan **DOM Traversal**, yaitu berpindah dari satu node ke node lainnya.
+* **Parent Node**: Node yang berada satu tingkat di atas node saat ini. Setiap node memiliki satu *parent* (kecuali *root node*).
+* **Child Node**: Node yang berada satu tingkat di bawah node saat ini. Sebuah *parent node* bisa memiliki satu atau lebih *child node*.
+* **Sibling Node**: Node yang berada pada level yang sama (memiliki *parent* yang sama).
+### Metode untuk DOM Traversal
+Dalam JavaScript, kita bisa menggunakan beberapa properti dan metode untuk menelusuri DOM Tree:
+* `parentNode`: Mengakses *parent node* dari elemen saat ini.
+    * **Contoh:** `const p2 = document.querySelector('.p2'); p2.parentNode;` (akan mengembalikan `<div id="b">`)
+* `parentElement`: Sama seperti `parentNode`, tetapi khusus mengembalikan **element node**.
+    * **Contoh:** `const p2 = document.querySelector('.p2'); p2.parentElement;`
+* `nextSibling` & `previousSibling`: Mengakses node berikutnya atau sebelumnya pada level yang sama.
+    * **Contoh:** `const p2 = document.querySelector('.p2'); p2.nextSibling;` (akan mengembalikan *node* kosong atau `null` jika tidak ada)
+* `nextElementSibling` & `previousElementSibling`: Versi yang lebih sering digunakan karena mengabaikan *text node* dan *comment node*, hanya berfokus pada **element node**.
+    * **Contoh:** `const p2 = document.querySelector('.p2'); p2.nextElementSibling;`
+* `childNodes`: Mengembalikan semua *child node* dari sebuah elemen, termasuk *text node* dan *comment node*.
+* `children`: Mengembalikan hanya **element node** dari sebuah elemen. Lebih sering digunakan daripada `childNodes`.
+* `firstChild` & `lastChild`: Mengakses *child node* pertama atau terakhir, termasuk *text node*.
+* `firstElementChild` & `lastElementChild`: Mengakses **element node** *child* pertama atau terakhir. Lebih sering digunakan.
+**Catatan Penting:** Properti `*Sibling` dan `*Child` seringkali bisa membingungkan karena adanya *text node* yang tidak terlihat (misalnya spasi, tab, atau baris baru). Oleh karena itu, properti dengan akhiran `*Element` (seperti `nextElementSibling` atau `children`) lebih sering digunakan karena lebih mudah diprediksi.
+
+
+
+JS LANJUTAN
+Review (object revisited)
+- 4 cara object: object literal, function declaration, constructor function (keyword new), object.create()
+- object literal
+let mahasiswa1 = {
+nama : "Ricky",
+energi : 10,
+makan : function(porsi) {
+this.energi += porsi;
+console.log(`Halo ${this.nama}, selamat makan`);
+}
+};
+let mahasiswa2 = {
+nama : "Yusuf",
+energi : 20,
+makan : function(porsi) {
+this.energi += porsi;
+console.log(`Halo ${this.nama}, selamat makan`);
+}
+};
+> mahasiswa1
+> mahasiswa1.makan(2)
+> mahasiswa1
+- function declaration // pasca diubah
+const methodMahasiswa = {
+makan : function(porsi) {
+this.energi += porsi;
+console.log(`Halo ${this.nama}, selamat makan`),
+}
+mabar : function(jam) {
+this.energi -= jam;
+console.log(`Halo ${this.nama}, selamat bermain`),
+}
+tidur : function(jam) {
+this.energi += jam;
+console.log(`Halo ${this.nama}, selamat tidur`);
+}
+};
+function Mahasiswa(nama, energi) {
+let mahasiswa = Object.create(methodMahasiswa);
+mahasiswa.nama = nama;
+mahasiswa.energi = energi;
+return mahasiswa;
+}
+let ucup = Mahasiswa("Ucup", 10);
+let pucu = Mahasiswa("Pucu", 15);
+> ucup
+> ucup.makan(3)
+> ucup
+- constructor function // keyword new
+function Mahasiswa(nama, energi) {
+this.nama = nama;
+this.energi = energi;
+this.makan = function(porsi) {
+this.energi += porsi;
+console.log(`Halo ${this.nama}, selamat makan`);
+}
+this.mabar = function(jam) {
+this.energi -= jam;
+console.log(`Halo ${this.nama}, selamat bermain`);
+}
+}
+let joseph = new Mahasiswa("Joseph", 17);
+> joseph
+> joseph.mabar(5)
+- object.create()
+- review code sebelumnya (3) : object literal problemnya tidak efektif untuk object banyak, function declaration di belakang layar 2 method (di code sebelumnya) tetap dibuat problemnya boros resource, solusinya membuat object terpisah agar tak duplikat, yang berisi 2 method sebelumnya, problem lain bila membuat method baru, harus nambahin manual, solusinya pakai Object.create(), solusi agar tak perlu membuat object baru yang kita buat sendiri (object lain) menggunakan prototype
+- prototype (parent di js)
+function Mahasiswa(nama, energi) {
+this.nama = nama;
+this.energi = energi;
+}
+Mahasiswa.prototype.makan = function(porsi) {
+this.energi += porsi;
+return `Halo ${this.nama}, selamat makan`;
+}
+Mahasiswa.prototype.mabar = function(jam) {
+this.energi -= jam;
+return `Halo ${this.nama}, selamat mabar`;
+}
+Mahasiswa.prototype.turu = function(jam) {
+this.energi += jam;
+return `Halo ${this.nama}, selamat turu`;
+}
+let yus = new Mahasiswa("Yus", 12);
+> yus
+> yus.makan(4)
+> yus.energi
+- mirip dengan konsep oop class di php & java
+- versi Class
+class Mahasiswa {
+constructor(nama, energi) {
+this.nama = nama;
+this.energi = energi;
+}
+makan(porsi) {
+this.energi += porsi;
+return `Halo ${this.nama}, selamat makan`;
+}
+mabar(jam) {
+this.energi -= jam;
+return `Halo ${this.nama}, selamat mabar`;
+}
+turu(jam) {
+this.energi += jam;
+return `Halo ${this.nama}, selamat turu`;
+}
+};
+let sandika = new Mahasiswa("Sandika", 10);
+let dido = new Mahasiswa("Dido", 11);
+> sandika
+> dido
+> Array.prototype
+> Object.prototype
+> Number.prototype

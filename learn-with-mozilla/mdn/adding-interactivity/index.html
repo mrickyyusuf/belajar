@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add interactivity</title>
+    <style>
+      .done {
+        color: darkseagreen;
+        text-decoration: line-through solid black 2px;
+      }
+    </style>
+  </head>
+  <body>
+    <p>To do Today :</p>
+
+    <ul>
+      <li>Eat</li>
+      <li>Sleep</li>
+      <li>Workout</li>
+      <li>Pray</li>
+    </ul>
+
+    <script>
+      const List = document.querySelectorAll("li");
+
+      function toggleDone(e) {
+        if (!e.target.className) {
+          e.target.className = "done";
+        } else {
+          e.target.className = "";
+        }
+      }
+
+      List.forEach((item) => {
+        item.addEventListener("click", toggleDone);
+      });
+    </script>
+  </body>
+</html>

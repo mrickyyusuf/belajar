@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Varible MDN Exercise</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      p {
+        color: purple;
+        margin: 0.5em 0;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="section1"></section>
+
+    <section class="section2"></section>
+
+    <script>
+      // Task 1
+
+      let myName = "Paul";
+
+      // Don't edit the code above here!
+
+      // Add your code here
+      myName = "Joseph";
+
+      // Don't edit the code below here!
+
+      const section1 = document.querySelector("section1");
+      const para = document.createElement("p");
+      para.textContent = myName;
+      section.appendChild(para);
+
+      //
+      // Task 2
+      // Fix the following code
+
+      let myName1 = "Default";
+      myName1 = "Chris";
+
+      let myAge = 42;
+
+      // Don't edit the code below here!
+
+      const section2 = document.querySelector("section2");
+      const para1 = document.createElement("p");
+      const para2 = document.createElement("p");
+      para1.textContent = myName;
+      para2.textContent = `In 20 years, I will be ${myAge + 20}`;
+      section.appendChild(para1);
+      section.appendChild(para2);
+    </script>
+  </body>
+</html>

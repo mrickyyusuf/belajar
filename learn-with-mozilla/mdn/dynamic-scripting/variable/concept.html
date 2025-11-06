@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Learn variable concept with mdn</title>
+  </head>
+  <body>
+    <button id="button_A">Press me</button>
+    <h3 id="heading_A"></h3>
+
+    <button id="button_B">Press me</button>
+    <h3 id="heading_B"></h3>
+
+    <script>
+      // Variable example
+      const buttonA = document.querySelector("#button_A");
+      const headingA = document.querySelector("#heading_A");
+
+      let count = 1;
+
+      buttonA.onclick = () => {
+        buttonA.textContent = "Try again!";
+        headingA.textContent = `${count} clicks so far`;
+        count += 1;
+      };
+
+      // Can't w/ variable (you can try erase initialization of count)
+      const buttonB = document.querySelector("#button_B");
+      const headingB = document.querySelector("#heading_B");
+
+      buttonA.onclick = () => {
+        buttonB.textContent = "Try again!";
+        headingB.textContent = `${count} clicks so far`;
+      };
+
+      // Declare variable
+      let myName;
+      let myAge;
+
+      myName;
+      myAge;
+
+      scoobyDoo;
+
+      // Initializing variable
+      myName = "Chris";
+      myAge = 37;
+
+      myName;
+      myAge;
+
+      let myDog = "Rover";
+
+      // A note about var
+      var myName1;
+      var myAge1;
+      // weird about hoisting concept, and variable that initialized before declarized (in let, the output is undefined)
+      myName2 = "John";
+
+      function logName() {
+        console.log(myName2);
+      }
+
+      logName();
+
+      var myName2;
+
+      // Var can do this (logic error)
+      var myName3 = "Christo";
+      var myName3 = "Bob";
+
+      // Different let & var
+      /* Let can't
+let myName4 = "Axel";
+let myName4 = "Alex"; */
+      // But do this instead
+      let myName4 = "Axel";
+      myName4 = "Alex";
+      // In console browser
+      /* Can't
+> let myName = "Chris";
+  let myName = "Bob";
+// As one input: SyntaxError: Identifier 'myName' has already been declared
+Can
+> let myName = "Chris";
+> let myName = "Bob";
+// As two inputs: both succeed
+*/
+
+      // Updating variable
+      myName = "Bob";
+      myAge = 40;
+
+      /*
+Good name examples:
+age
+myAge
+init
+initialColor
+finalOutputValue
+audio1
+audio2
+Bad name examples:
+1
+a
+_12
+myage
+MYAGE
+var
+Document
+skjfndskjfnbdskjfb
+thisisareallylongvariablenameman
+*/
+
+      // Variable types
+      // Numbers
+      let myAge1 = 17;
+
+      // Strings
+      let dolphinGoodbye = "So long and thanks for all the fish";
+
+      // Booleans
+      let iAmAlive = true;
+      // let test = 6 < 3; // same like this
+
+      // Arrays
+      let myNameArray = ["Chris", "Bob", "Jim"];
+      let myNumberArray = [10, 15, 40];
+      myNameArray[0]; // should return 'Chris'
+      myNumberArray[2]; // should return 40
+
+      // Objects
+      let dog = { name: "Spot", breed: "Dalmatian" };
+      dog.name; // call dog object (name)
+
+      // Dynamic typing
+      let myString = "Hello"; // enclosed with double or single quote
+      let myNumber = "500"; // oops, this is still a string
+      typeof myNumber;
+      myNumber = 500; // much better — now this is a number
+      typeof myNumber;
+
+      // Constants
+      let counts; // can
+      let counts1 = 1;
+      counts1 = 2;
+      /*
+    const counts2; // can't
+    const counts2 = 4;
+    counts2 = 3; */
+      // But can this
+      const bird = { species: "Kestrel" };
+      console.log(bird.species); // "Kestrel"
+      // Can change
+      bird.species = "Striated Caracara";
+      console.log(bird.species); // "Striated Caracara"
+
+      // When use let & const? Use const when you can, and use let when you have to.
+    </script>
+  </body>
+</html>

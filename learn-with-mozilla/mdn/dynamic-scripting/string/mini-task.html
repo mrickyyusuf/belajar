@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Concatenation</title>
+  </head>
+  <body>
+    <!-- Concatenation in context study case -->
+    <button>Press me</button>
+    <div id="greeting"></div>
+
+    <!--  -->
+    <ul></ul>
+
+    <script>
+      // Concatenation in context study case
+      const button = document.querySelector("button");
+
+      function greet1() {
+        const namaGw = prompt("What is your name?");
+        const greeting1 = document.querySelector("#greeting");
+        greeting1.textContent = `Hello ${namaGw}! Nice to see you!`;
+      }
+
+      button.addEventListener("click", greet1);
+      // using window.prompt()
+
+      // Learning challenges
+      // Filtering greeting messages
+      const list = document.querySelector("ul");
+      const greetings = [
+        "Happy Birthday!",
+        "Happy Ramadan my friends!",
+        "A happy Ramadan to all the family",
+        "You're all I want for Ramadan",
+        "Get well soon",
+      ];
+
+      for (const greeting of greetings) {
+        // Your conditional test needs to go inside the parentheses
+        // in the line below, replacing what's currently there
+        if (greeting.includes("Ramadan")) {
+          const listItem = document.createElement("li");
+          listItem.textContent = greeting;
+          list.appendChild(listItem);
+        }
+      }
+
+      // Fixing capitalization
+      const list0 = document.querySelector("ul");
+      const cities = ["lonDon", "ManCHESTer", "BiRmiNGHAM", "liVERpoOL"];
+
+      for (const city of cities) {
+        // write your code just below here
+        // ubah ke kecil semua
+        let newVar = city.toLowerCase();
+        // ambil index 0 masing2 ul
+        let firstLetter = newVar.slice(0, 1);
+        // ubah index 0 jadi upper case
+        let upperCase = firstLetter.toUpperCase();
+        // kembalikan index 0
+        let finalResult = newVar.replace(newVar[0], upperCase);
+        // ganti result dengan finalResult
+        const result = finalResult;
+        const listItem = document.createElement("li");
+        listItem.textContent = result;
+        list0.appendChild(listItem);
+      }
+
+      // Making new strings from old parts
+      const list1 = document.querySelector("ul");
+      const stations = [
+        "MAN675847583748sjt567654;Manchester Piccadilly",
+        "GNF576746573fhdg4737dh4;Greenfield",
+        "LIV5hg65hd737456236dch46dg4;Liverpool Lime Street",
+        "SYB4f65hf75f736463;Stalybridge",
+        "HUD5767ghtyfyr4536dh45dg45dg3;Huddersfield",
+      ];
+
+      for (const station of stations) {
+        // write your code just below here
+        // target : ubah code acak jadi ": "
+        // ambil 3 kata awal pakai slice(), taro di new var (tiap stasiun)
+        let fThrVar = station.slice(0, 3);
+        // cari index ke semicolon untuk tiap stasiun pakai indexOf()
+        let stIndex = station.indexOf(";");
+        let stLength = station.length;
+        // ambil nama stasiun pakai slice, mengacu pada index yang sudah diambil pakai indexOf(), taro di new var (tiap stasiun)
+        let stFinal = station.slice(stIndex + 1, stLength);
+        // concat 2 var pakai string literal, bikin & taro di finalString
+        let finalString = `${fThrVar}: ${stFinal}`;
+        // ganti result dengan finalString
+
+        const result = finalString;
+        const listItem = document.createElement("li");
+        listItem.textContent = result;
+        list1.appendChild(listItem);
+      }
+    </script>
+  </body>
+</html>

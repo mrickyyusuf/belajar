@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task 1 - functon</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      p {
+        color: purple;
+        margin: 0.5em 0;
+      }
+    </style>
+  </head>
+  <body>
+    <p></p>
+    <script>
+      const names = [
+        "Chris",
+        "Li Kang",
+        "Anne",
+        "Francesca",
+        "Mustafa",
+        "Tina",
+        "Bert",
+        "Jada",
+      ];
+      const para = document.querySelector("p");
+
+      // Don't edit the code above here!
+
+      // Add your code here
+      function chooseName() {
+        const randomNumber = Math.floor(Math.random() * names.length);
+        const choice = names[randomNumber];
+        para.textContent = choice;
+      }
+
+      chooseName();
+    </script>
+  </body>
+</html>

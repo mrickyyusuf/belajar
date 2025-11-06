@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        /* width: 600px; */
+        width: 800px;
+        border: 1px solid black;
+        margin: auto;
+        padding: 5px;
+        /* overflow: auto; */
+      }
+
+      /* 3 */
+      .kiri {
+        width: 150px;
+        height: 500px;
+        background-color: salmon;
+        float: left;
+        padding: 10px;
+        box-sizing: border-box;
+      }
+
+      .tengah {
+        width: 500px;
+        height: 500px;
+        background-color: lightskyblue;
+        float: left;
+      }
+
+      .kanan {
+        width: 150px;
+        height: 500px;
+        background-color: limegreen;
+        float: right;
+      }
+
+      .cf:before,
+      .cf:after {
+        content: " "; /* 1 */
+        display: table; /* 2 */
+      }
+
+      .cf:after {
+        clear: both;
+      }
+
+      .cf {
+        zoom: 1;
+      }
+
+      /* .clear {
+        clear: both;
+        /* clear: left;
+        /* clear: right;
+      } */
+
+      /* 2 
+      .kotak {
+        width: 80px;
+        height: 80px;
+        background-color: salmon;
+        color: white;
+        text-align: center;
+        line-height: 80px;
+        font-size: 30px;
+        margin: 2px;
+        float: left;
+        /* float: right;
+      }
+
+      .clear {
+        clear: left;
+        /* clear: right; 
+      } */
+
+      /* 1
+      /* .img {
+        float: left;
+        margin: 5px;
+      }
+
+      .clear {
+        clear: left;
+      } */
+
+      /* div { 
+      /* .satu,
+      .dua,
+      .tiga {
+        width: 100px;
+        height: 100px;
+      }
+
+      .satu {
+        background-color: salmon;
+      }
+
+       .dua {
+        background-color: limegreen;
+        /* float: left; 
+        float: right;
+      }
+
+       .tiga {
+        background-color: lightskyblue;
+      } */
+    </style>
+  </head>
+  <body>
+    <div class="container cf">
+      <div class="kiri"></div>
+      <div class="tengah"></div>
+      <div class="kanan"></div>
+      <!-- <div class="clear"></div>
+      <div class="kotak">1</div>
+      <div class="kotak">2</div>
+      <div class="kotak">3</div>
+      <div class="kotak">4</div>
+      <div class="kotak">5</div>
+      <div class="kotak">6</div>
+      <div class="kotak">7</div>
+      <div class="kotak">8</div>
+      <div class="kotak">9</div>
+      <div class="kotak">10</div> -->
+      <!-- <img src="../image-placeholder/example.jpg" alt="" class="img" />
+      <div class="satu"></div>
+      <div class="dua"></div>
+      <div class="tiga"></div>
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequuntur
+        quibusdam sequi culpa fuga labore commodi quo, ab magnam, eius saepe
+        porro quas repudiandae quasi quidem incidunt, at voluptatibus
+        repellendus nesciunt?
+      </p> -->
+    </div>
+    <script></script>
+  </body>
+</html>

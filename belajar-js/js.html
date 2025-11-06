@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Learn JS</title>
+    <style></style>
+  </head>
+  <body>
+    <script>
+      // POPUP BOX
+      /*alert("HELLO WORLD!");
+        alert("I'AM");
+        alert("UCUP");
+        alert(":)");
+        let name = prompt("Input Your Name: ");
+        alert(`Hello ${name}`);
+        confirm("Continue Input? ");
+        alert("Welcome!");
+        let again = true;
+        while (again === true) {
+          let name = prompt("Input your name: ");
+          alert(`HELLO ${name}!`);
+          again = confirm("Wanna repeat?");
+        }
+        alert("Thank You!^^");*/
+
+      //WHILE LOOP
+      /*let repeat = true;
+        while (repeat) {
+          console.log("You are learning while loop");
+          repeat = confirm("Repeat again?");
+        }
+
+        let a = 1;
+        while (a <= 5) {
+          console.log(`Looping to-${a}`);
+          a++;
+        }*/
+      //angkot1.js
+      /*let angkot = 1;
+      while (angkot <= 10) {
+        console.log(`Angkot ke-${angkot} operating well`);
+        angkot++;
+      }*/
+
+      //FOR LOOP
+      /*for(let a = 0; a < 5; a++) {
+        console.log(`Looping to-${a}`);
+      }
+      //angkot2.js
+      /*let amountAngkot = 10;
+      let operateAngkot = 6;
+      let numAngkot = 1;
+      while (numAngkot <= operateAngkot) {
+        console.log(`Angkot No.${numAngkot} operating well.`);
+        numAngkot++;
+      }
+      for (
+        operateAngkot = numAngkot;
+        operateAngkot <= amountAngkot;
+        operateAngkot++
+      ) {
+        console.log(`Angkot-${operateAngkot} not currently operating`);
+      }*/
+
+      //IF..ELSE CONDITION
+      /*let angka = 10;
+        if (angka < 10) {
+          console.log("Angka kurang dari 10");
+        } else if (angka === 10) {
+          console.log("Angka sama dengan 10");
+        } else {
+          console.log("Angka lebih dari 10");
+        }*/
+      //angkot3.js
+      //pseudocode: menampilkan 6 angkot beroperasi dan 4 tidak
+      /*let totalAngkot = 10;
+      let activeAngkot = 6;
+      for (let angkot = 1; angkot <= totalAngkot; angkot++) {
+        if (angkot <= activeAngkot) {
+          console.log(`Angkot ke-${angkot} beroperasi`);
+        } else {
+          console.log(`Angkot ke-${angkot} tidak beroperasi`);
+        }
+      }*/
+
+      //ELSE..IF CONDITION
+      /*let nilai = 85;
+        if (nilai >= 90) {
+            console.log("Nilai A");
+        } else if (nilai >= 80) {
+            console.log("Nilai B");
+        } else if (nilai >= 70) {
+            console.log("Nilai C");
+        } else if (nilai >= 60) {
+            console.log("Nilai D");
+        } else {
+            console.log("Nilai E");
+        }*/
+      //ganjil-genap.js
+      /*let angka = prompt("Masukkan angka: ");
+      if (angka % 2 === 0) {
+        console.log("Genap");
+      } else if (angka % 2 === 1) {
+        console.log("Ganjil");
+      } else {
+        console.log("Bukan angka");
+      }*/
+      //angkot4.js
+      /*let totalAngkot = 10;
+      let lemburAngkot = 8;
+      let aktifAngkot = 6;
+      for (let angkot = 1; angkot <= totalAngkot; angkot++) {
+        if (angkot <= aktifAngkot) {
+          console.log(`Angkot ke-${angkot} beroperasi`);
+        } else if (angkot === lemburAngkot) {
+          console.log(`Angkot ke-${angkot} lembur`);
+        } else {
+          console.log(`Angkot ke-${angkot} tidak beroperasi`);
+        }
+      }*/
+      //angkot5.js
+      //pseudocode: angkot 1 - 6 beroperasi, angkot 8 & 10 lembur, angkot 7 & 9 tidak beroperasi.
+      /*let totalAngkot = 10;
+      let lemburAngkot = 8;
+      let aktifAngkot = 6;
+      for (let angkot = 1; angkot <= totalAngkot; angkot++) {
+        if (angkot <= aktifAngkot) {
+          console.log(`Angkot ke-${angkot} beroperasi`);
+        } else if (
+          angkot === lemburAngkot ||
+          angkot === totalAngkot
+        ) {
+          console.log(`Angkot ke-${angkot} lembur`);
+        } else {
+          console.log(`Angkot ke-${angkot} tidak beroperasi`);
+        }
+      }*/
+
+      //pseudocode: angkot 1 - 6 beroperasi, angkot 5, 8, 10 lembur, angkot 7 & 9 tidak beroperasi.
+      /*let totalAngkot = 10;
+      let lemburAngkot = 8;
+      let aktifAngkot = 6;
+      for (let angkot = 1; angkot <= totalAngkot; angkot++) {
+        if (angkot <= aktifAngkot && angkot !== 5) {
+          console.log(`Angkot ke-${angkot} beroperasi`);
+        } else if (
+          angkot === 5 ||
+          angkot === lemburAngkot ||
+          angkot === totalAngkot
+        ) {
+          console.log(`Angkot ke-${angkot} lembur`);
+        } else {
+          console.log(`Angkot ke-${angkot} tidak beroperasi`);
+        }
+      }*/
+
+      //SWITCH CONDITION
+      /*let hari = 3;
+            switch (hari) {
+            case 1:
+                console.log("Hari Senin");
+                break;
+            case 2:
+                console.log("Hari Selasa");
+                break;
+            case 3:
+                console.log("Hari Rabu");
+                break;
+            case 4:
+                console.log("Hari Kamis");
+                break;
+            case 5:
+                console.log("Hari Jumat");
+                break;
+            case 6:
+                console.log("Hari Sabtu");
+                break;
+            case 7:
+                console.log("Hari Minggu");
+                break;
+            default:
+                console.log("Input tidak valid");
+            }*/
+
+      /*let a = prompt("Masukkan menu makanan");
+      a = a.toLowerCase();
+      switch (a) {
+        case "daging":
+        case "buah":
+        case "sayur":
+          alert("sehat");
+          break;
+        case "pizza":
+        case "hamburger":
+        case "gorengan":
+          alert("tak sehat");
+          break;
+        default:
+          alert("tak terdaftar");
+          break;
+      }*/
+
+      //NESTED LOOP & NESTED CONDITION
+      /*for (let i = 1; i <= 3; i++) {
+        console.log(`Outer loop to-${i}`);
+        for (let j = 1; j <= 2; j++) {
+          console.log(`Inner loop to-${j}`);
+        }
+      }
+
+      let number = 5;
+      if (number > 0) {
+        console.log("positive number");
+        if (number % 2 === 0) {
+          console.log("odd number");
+        } else {
+          console.log("even number");
+        }
+      } else {
+        console.log("negative number or zero");
+      }*/
+
+      //print star down
+      /*for (let i = 0; i < 5; i++) {
+        console.log("*");
+      }*/
+
+      //print the star to the side
+      // let s = "";
+      // for (let i = 0; i < 5; i++) {
+      //   s += "*";
+      //   //so that the stars are down
+      //   s += "\n";
+      // }
+      // console.log(s);
+
+      //print the star to the side then out of the loop, down 1 row
+      // let s = "";
+      // for (let i = 0; i < 2; i++) {
+      //   for (let j = 0; j < 2; j++) {
+      //     s += "*";
+      //   }
+      //   s += "\n";
+      // }
+      // console.log(s);
+
+      //bintang-tangga.js
+      /*let s = "";
+      for (let i = 0; i < 10; i++) {
+        for (let j = 0; j <= i; j++) {
+          s += "*";
+        }
+        s += "\n";
+      }
+      console.log(s);*/
+
+      //bintang-tangga-terbalik.js
+      /*let s = "";
+      for (let i = 5; i > 0; i--) {
+        for (let j = 0; j < i; j++) {
+          s += "*";
+        }
+        s += "\n";
+      }
+      console.log(s);*/
+
+      //bintang-tangga-terbalik-mirror.js
+      /*let n = 5;
+      for (let i = 1; i <= n; i++) {
+        let line = "";
+        for (j = 1; j <= n; j++) {
+          if (j < i) {
+            line += " ";
+          } else {
+            line += "*";
+          }
+        }
+        console.log(line);
+      }*/
+
+      //piramida.js
+      //PSEUDOCODE: print 5 vertical line, in line 1 plus the "*" in index 3, line 2, except index 1 & 5
+
+      //piramida-pascal.js
+
+      //setengah-belah-ketupat-kanan.js
+
+      //belah-ketupat.js
+
+      //papan-catur.js
+      //pseduocode chess board #: print 2 line (space) # alternate, loop to the right 5 times, loop those 2 rows 5 times
+      /*let catur = "";
+      for (let i = 0; i < 8; i++) {
+        for (let j = 0; j < 8; j++) {
+          if (i % 2 === 0) {
+            catur += " #";
+          } else {
+            catur += "# ";
+          }
+        }
+        catur += "\n";
+      }
+      console.log(catur);*/
+
+      //suwit-jawa.js
+      /*pseudocode: 
+      menangkap pilihan player, 
+      menangkap pilihan computer, 
+      membangkitkan bilangan random, 
+      menentukan rules, 
+      tampilkan hasilnya*/
+      /*let ask = true;
+      while (ask) {
+        let human = prompt("Please pick either: elephant, human, ant");
+        let robot = Math.random();
+        if (robot < 0.34) {
+          robot = "elephant";
+        } else if (robot >= 0.34 && robot < 0.67) {
+          robot = "human";
+        } else {
+          robot = "ant";
+        }
+        console.log(robot);
+        let result = "";
+        if (human == robot) {
+          result = "DRAW";
+        } else if (human == "elephant") {
+          result = robot == "human" ? "WIN" : "LOSE";
+        } else if (human == "human") {
+          result = robot == "ant" ? "WIN" : "LOSE";
+        } else if (human == "ant") {
+          result = robot == "elephant" ? "WIN" : "LOSE";
+        } else {
+          result = "Choose Wrong Input!";
+        }
+        alert(
+          `You pick ${human} & robot pick ${robot} \nAnd the result is : You ${result}`
+        );
+        ask = confirm("Again?");
+      }
+      alert("Thank You for Playing!^^");*/
+
+      //tebak-angka.js
+
+      //FUNCTION
+      /*function greet(name) {
+            return `Halo, ${name}!`;
+        }*/
+      // built-in function string
+      // let nama = "Ricky Yusuf";
+      // console.log(nama.charAt(6));
+      // built-in function math
+      // let num = Math.random();
+      // console.log(num);
+
+      // user defined function
+      // function declaration
+      // function twoNum(a, b) { -> parameter
+      //   let total;
+      //   total = a + b;
+      //   return total;
+      // }
+      // alert(twoNum(10, 20)); -> argument
+      // alert(twoNum(13, 27));
+
+      //PSEUDOCODE add up 2 cubes: side of cubes 8 & 3, volume 8^3 & 3^3, add up, return
+      // function cubes(a, b) {
+      //   let vol1 = Math.pow(a, 3);
+      //   let vol2 = Math.pow(b, 3);
+      //   let total = vol1 + vol2;
+      //   return total;
+      // }
+      // alert(cubes(8, 3));
+      // console.log(cubes(8, 3));
+
+      // refactoring add up 2 cubes program
+      // function cubes(a, b) {
+      //   return a ** 3 + b ** 3;
+      // }
+      // alert(cubes(7, 9));
+
+      // function argument
+      // function plus(a, b) {
+      //   return a + b;
+      // }
+      // let a = parseInt(prompt('input first value : '));
+      // let b = parseInt(prompt('input second value : '));
+      // let result = plus(a * 2, b * 2);
+      // console.log(result);
+
+      // function plus(a, b) {
+      //   return a + b;
+      // }
+      // function time(a, b) {
+      //   return a * b;
+      // }
+      // let result = time(plus(1, 2), plus(3, 4));
+      // console.log(result);
+
+      // pseudo-variable: arguments
+      // function plus() {
+      //   let result = 0;
+      //   for (let i = 0; i < arguments.length; i++) {
+      //     result += arguments[i];
+      //   }
+      //   return result;
+      // }
+      // let try = plus(9, 8, 7, 6, 5);
+      // console.log(try);
+
+      //block scope example in c lang:
+      /*int i = 2;
+        if( i % 2 == 0 ) {
+          bool even = true;
+        }
+        if( even ) {
+          printf("even!");
+        } 
+        //output: error: 'even' is undeclared*/
+
+      //function scope
+      /*let i = 2;
+      if (i % 2 == 0) {
+        let even = true;
+      }
+      if ( even ) {
+        console.log("even!");
+      }
+      output: even!*/
+
+      //global/window scope
+      //kalau tak ada var = a but if there is a local one, then js automatically makes var a global (not recommended because it pollutes the global scope). To overcome this, use "use strict" -> make var a local instead of global if there is no var a in global.
+      //"use strict";
+      //let a = 1;
+      //window.a
+      //output: a
+      //function tes() {
+      //a = 2; -> hit the global because there is no let
+      //let a = 2;
+      //let b = 2;
+      //console.log(b); -> printed
+      //console.log(a);
+      //console.log(window.a);
+      //inside can access globally, outside cannot access locally
+      //}
+      //tes();
+      //console.log(a);
+      //console.log(b); -> not printed
+
+      // let a = 1;
+      // function tes(a) {
+      //   console.log(a);
+      // }
+      // tes(2);
+      // tes(a);
+      // console.log(a);
+
+      //recursive in js
+      /*
+        //infinite
+        function tes() {
+          return tes();
+        }
+        tes();
+
+        //infinite
+        function showNum(n) {
+          console.log(n);
+          return showNum(n-1);
+          }
+          showNum(10);
+
+        //use base case / return to counter infinite
+        function showNum(n) {
+          if (n === 0) return;
+          console.log(n);
+          return showNum(n - 1);
+        }
+        showNum(10);
+
+        //factorial
+        function factorial(n) {
+          if(n === 0 ) return 1;
+          return n * factorial(n-1);
+        }
+
+        //implementation of recursive
+        replace looping
+        fibonacci
+        search and browse in list and tree data structures
+        for lang that have no looping concept, ex: haskell, erlang, prolog, etc
+      */
+
+      //function declaration
+      /*
+      function showMessage(name) {
+        alert(`Hello ${name}`);
+      }
+      showMessage("Ucup");
+
+      //can
+      showMessage("Ucup");
+      function showMessage(name) {
+        alert(`Hello ${name}`);
+      }
+
+      //function expression
+      let showMessage = function(name) {
+        alert(`Hello ${name}`);
+      }
+      showMessage("Ucup");
+      
+      //can't
+      showMessage("Ucup");
+      let showMessage = function(name) {
+        alert(`Hello ${name}`);
+      }
+      */
+
+      //ARRAY
+      //angkot5.js
+      /*
+      program: pengelolaan penumpang angkot (penumpang naik, turun, dimana dia duduk, dsb),
+      15 array, 
+      penumpangNaik = tambahPenumpang() // 2 parameter
+      penumpangTurun = hapusPenumpang() // 2 parameter
+      parameter = namaPenumpang, array penumpang
+
+      rules:
+      1. jika angkot kosong, maka penumpang yang naik duduk di kursi 1
+      2. penumpang berikutnya duduk di kursi selanjutnya secara berurutan
+      3. jika ada kursi kosong karena ada penumpang yang turun, penumpang yang naik berikutnya duduk di kursi kosong terlebih dahulu
+      4. asumsi kursi tak akan penuh, akan bertambah terus jika ada penumpang yang naik (entah ditransfer/duduk lesehan di tengah)
+      5. nama penumpang tak boleh sama, untuk menghindari kebingungan ketika nanti penumpang turun, bila ada nama penumpang yang sama berarti dia orang yang sama/masih ada di dalam angkot
+      6. jika angkot kosong, tampilkan pesan bahwa angkot kosong
+      7. jika ada penumpang yang namanya sesuai, maka hapus nama penumpang pada array dengan nilai undefined
+      8. jika tidak ada penumpang yang namanya sesuai, tampilkan pesan kesalaahnnya       
+
+      test case:
+      1. Misal ada yang naik, maka tambahPenumpang("Sandhika", penumpang); //output: ["Sandhika"]. Kalau ada penumpang lain naik, nama penumpangnya jadi index berikutnya/duduk bangku kedua dst
+      2. Misal ada 3 penumpang, penumpang no 2 turun (bolong tengah) jadi undefined, jika ada yang naik maka yang naik mengisi bangku kosong/yang bolong
+      3. Kalau input nama penumpang yang masih ada di angkot maka tampilkan pesan "[nama] sudah ada di dalam angkot"
+      4. Kalau hapus penumpang dimana angkot masih kosong, maka tampilkan pesan angkot masih kosong
+      5. Kalau ada penumpang lalu kita hapus penumpang / turunin maka nilainya menjadi undefined
+      6. Kalau kita hapus penumpang yang namanya tak ada dalam angkot maka tampilkan pesan penumpang tidak adad di dalam angkot
+      let penumpang = [];
+      let tambahPenumpang = function (namaPenumpang, penumpang) {
+        // jika angkot kosong
+        if (penumpang.length == 0) {
+          //   tambah penumpang di awal array
+          penumpang.push(namaPenumpang);
+          //   kembalikan isi array & keluar dari function
+          return namaPenumpang;
+          // else
+        } else {
+          //   telusuri seluruh kursi dari awal
+        for (let i = 0; i < penumpang.length; i++) {
+            //     jika ada kursi kosong
+            if (penumpang[i] == undefined) {
+              //       tambah penumpang di kursi tersebut
+              penumpang[i] = namaPenumpang;
+              //       kembalikan isi array & keluar dari function
+              return penumpang;
+            }
+            //     jika sudah ada nama yang sama
+            else if (penumpang[i] == namaPenumpang) {
+              //       tampilkan pesan kesalahannya
+              console.log(`${namaPenumpang} sudah ada di dalam angkot.`);
+              //       kembalikan isi array & keluar dari function
+              return penumpang;
+            }
+            //     jika seluruh kursi terisi
+            else if (i == penumpang.length - 1) {
+              //       tambah penumpang di akhir array
+              penumpang.push(namaPenumpang);
+              //       kembalikan isi array & keluar dari function
+              return penumpang;
+            }
+          }
+        }
+      };
+
+      let hapusPenumpang = function (namaPenumpang, penumpang) {
+        // jika angkot kosong
+        if (penumpang.length == 0) {
+          // tampilkan pesan bahwa angkot kosong, dan tidak mungkin ada penumpang turun
+          console.log("Angkot masih kosong");
+          // else
+        } else {
+          // telusuri seluruh kursi dari awal
+          for (let i = 0; i < penumpang.length; i++) {
+            // jika nama penumpang sesuai
+            if (penumpang[i] == namaPenumpang) {
+              // hapus penumpang dengan mengubah namanya menjadi undefined
+              penumpang[i] = undefined;
+              // jika tidak ada nama yang sesuai
+            } else if (i == penumpang.length - 1) {
+              //tampilkan pesan kesalahannya
+              console.log(`${namaPenumpang} tidak ada di dalam angkot.`);
+              //kembalikan isi array & keluar dari function
+              return penumpang;
+            }
+          }
+        }
+        //kembalikan isi array & keluar dari function
+        return penumpang;
+      };
+      */
+
+      //1. object literal
+      //PROBLEM: Tidak efektif untuk banyak object
+      // let mhs1 = {
+      //   nama: "ucup",
+      //   energi: 10,
+      //   makan: function(porsi){
+      //     this.energi = this.energi + porsi;
+      //     console.log(`Halo ${this.nama}, selamat makan!`)
+      //   }
+      // }
+      // let mhs2 = {
+      //   nama: "pucu",
+      //   energi: 20,
+      //   makan: function(porsi){
+      //     this.energi = this.energi + porsi;
+      //     console.log(`Halo ${this.nama}, selamat makan!`)
+      //   }
+      // }
+
+      //2. function declaration & object.create()
+      //PROBLEM: DUPLIKASI
+      //SOLUSI: Buat object terpisah, objectnya berisi method ini, kemudian pakai Object.create & prototype:
+      //   mhs.makan = function(porsi){
+      //     this.energi += porsi;
+      //     console.log(`Halo ${this.nama}, selamat makan!`);
+      //   }
+      //   mhs.main = function(porsi){
+      //     this.energi -= porsi;
+      //     console.log(`Halo ${this.nama}, selamat main!`);
+      //   }
+      //ubah function declaration ini menjadi constructor function:
+      // function Mahasiswa(nama, energi) {
+      //   let mhs = Object.create(methodMhs);
+      //   mhs.nama = nama;
+      //   mhs.energi = energi;
+      //   return mhs;
+      // }
+      //----------------------------------------------------------
+      // const methodMhs = {
+      //   makan: function (porsi) {
+      //     this.energi += porsi;
+      //     console.log(`Halo ${this.nama}, selamat makan!`);
+      //   },
+      //   main: function (porsi) {
+      //     this.energi -= porsi;
+      //     console.log(`Halo ${this.nama}, selamat main!`);
+      //   },
+      //   tidur: function (jam) {
+      //     this.energi += jam * 2;
+      //     console.log(`Halo ${this.name}, selamat bobo!`);
+      //   },
+      // };
+
+      // function Mahasiswa(nama, energi) {
+      //   let mhs = Object.create(methodMhs);
+      //   mhs.nama = nama;
+      //   mhs.energi = energi;
+      //   return mhs;
+      // }
+
+      // let ucup = Mahasiswa("ucup", 10);
+      // let pucu = Mahasiswa("pucu", 20);
+
+      //3. constructor function (keyword new)
+      //   function Mhs(nama, energi) {
+      //   this.nama = nama;
+      //   this.energi = energi;
+
+      //   this.makan = function(porsi){
+      //     this.energi += porsi;
+      //     console.log(`Halo ${this.nama}, selamat makan!`);
+      //   }
+
+      //   this.main = function(porsi){
+      //     this.energi -= porsi;
+      //     console.log(`Halo ${this.nama}, selamat main!`);
+      //   }
+      // }
+
+      // let dika = new Mhs("dika", 10);
+
+      //Mirip class, di js disebut prototypal inheritance
+      // function Mahasiswa(nama, energi) {
+      //   // let mhs = Object.create(methodMhs);
+      //   // let mhs = {};
+      //   // let this = {}; //dibelakang layar
+      //   // let this = Object.create(Mahasiswa.prototype); //dibelakang layar
+      //   this.nama = nama;
+      //   this.energi = energi;
+      //   // return mhs;
+      //   // return this;
+      // }
+
+      // Mahasiswa.prototype.makan = function(porsi){
+      //   this.energi += porsi;
+      //   return `Halo ${this.nama}, selamat makan`;
+      // }
+
+      // Mahasiswa.prototype.main = function(jam){
+      //   this.energi -= jam;
+      //   return `Halo ${this.nama}, selamat bermain`;
+      // }
+
+      // Mahasiswa.prototype.tidur = function(jam){
+      //   this.energi += jam * 2;
+      //   return `Halo ${this.nama}, selamat tidur`;
+      // }
+
+      // let sandhika = new Mahasiswa("Sandhika", 10);
+
+      //Bikin yang sama tapi versi class
+      // class Mahasiswa {
+      //   constructor(nama, energi) {
+      //     this.nama = nama;
+      //     this.energi = energi;
+      //   }
+      //   makan(porsi){
+      //     this.energi += porsi;
+      //     return `Halo ${this.nama}, selamat makan`;
+      //   }
+
+      //   main(jam){
+      //     this.energi -= jam;
+      //     return `Halo ${this.nama}, selamat bermain`;
+      //   }
+
+      //   tidur(jam){
+      //     this.energi += jam * 2;
+      //     return `Halo ${this.nama}, selamat tidur`;
+      //   }
+      // }
+
+      // let sandhika = new Mahasiswa("Sandhika", 10);
+      // let oddy = new Mahasiswa("Oddy", 20);
+
+      let angka = [1, 2, 3];
+      console.log(angka.reverse());
+      //Array.prototype
+      // let angka = new Array();
+      // function Array() {
+      //   let this = Object.create(Array.prototype);
+      // }
+    </script>
+  </body>
+</html>

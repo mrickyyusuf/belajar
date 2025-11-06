@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>String task</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      p {
+        color: purple;
+        margin: 0.5em 0;
+      }
+    </style>
+
+</head>
+  <body>
+    <section></section>
+
+    <script>
+      // 1.
+      const quoteStart = "Don't judge each day by the harvest you reap ";
+      // Add your code here
+      let quoteEnd = "lorem ipsum";
+      let finalQuote = quoteStart + quoteEnd;
+      // Don't edit the code below here!
+      const section = document.querySelector("section");
+      const para0 = document.createElement("p");
+      para0.textContent = finalQuote;
+      section.appendChild(para0);
+
+      // 2.
+      const quote0 =
+        "I do not like green eggs and ham. I do not like them, Sam-I-Am.";
+      const substring = "green eggs and ham";
+      // Don't edit the code above here!
+      // Add your code here
+      let quoteLength = quote0.length;
+      let index = quote0.indexOf("green eggs and ham");
+      let revisedQuote = quote0.slice(0, 14) + substring;
+      // Don't edit the code below here!
+      section.innerHTML = " ";
+      const para1 = document.createElement("p");
+      para1.textContent = `The quote is ${quoteLength} characters long.`;
+      const para2 = document.createElement("p");
+      para2.textContent = revisedQuote;
+      section.appendChild(para1);
+      section.appendChild(para2);
+
+      // 3.
+      const quote = "I dO nOT lIke gREen eGgS anD HAM";
+      // Don't edit the code above here!
+      // Add your code here
+      let fixedQuote = quote.toLowerCase();
+      let fixedQuote0 = quote.slice(0, 1);
+      fixedQuote = fixedQuote.replace(fixedQuote[0], fixedQuote0);
+      let finalQuote0 = `${fixedQuote.replace(
+        fixedQuote0.slice(14),
+        "junk food, haram food, & alcohol drink"
+      )}.`;
+      // Don't edit the code below here!
+      const section = document.querySelector("section");
+      const para3 = document.createElement("p");
+      para3.textContent = finalQuote0;
+      section.appendChild(para3);
+      
+      // 4.
+      const theorem = "Pythagorean theorem";
+      const a = 5;
+      const b = 8;
+      // Don't edit the code above here!
+      // Edit the string literal
+      const myString = `Using ${theorem}, we can work out that if the two shortest sides of a right-angled triangle have lengths of ${a} and ${b}, the length of the hypotenuse is ${Math.sqrt(
+        a ** 2 + b ** 2
+      )}.`;
+      // Don't edit the code below here!
+      const section = document.querySelector("section");
+      const para4 = document.createElement("p");
+      para4.textContent = myString;
+      section.appendChild(para4);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Numbers & Operators Concept with MDN</title>
+  </head>
+  <body>
+    <!-- box sizing -->
+    <canvas id="canvas" width="400" height="200"></canvas>
+    <p></p>
+
+    <!-- button machine -->
+    <button>Start machine</button>
+    <p>The machine is stopped.</p>
+
+    <script>
+      // Types of number :
+      // integers
+      // floats / floating point numbers
+      // binary
+      // octal
+      // hexadecimal
+
+      // Declare & initialize integer & float number
+      const myInt = 7;
+      const myFloat = 6.667;
+      myInt;
+      myFloat;
+
+      typeof myInt;
+      typeof myFloat;
+
+      // Useful number method : toFixed()
+      const lotsOfDecimal = 1.123456789;
+      lotsOfDecimal;
+      const twoDecimalPlaces = lotsOfDecimal.toFixed(2);
+      twoDecimalPlaces;
+
+      // Converting string to number data type : Number()
+      let myNumber = "73";
+      myNumber += 3;
+      // output : 733
+      typeof myNumber;
+      // fix with :
+      let myNumber0 = "74";
+      myNumber0 = Number(myNumber0) + 3;
+      // output : 77
+
+      // Other basic math object method : Math.random(), Math.floor(), Math.ceil()
+
+      // Aritmethic operator
+      /*
+        + is addition
+        - is substraction
+        * is multiplication
+        / is division
+        % is remainder / modulo
+        ** is exponent or with method Math.pow(4, 4)
+    */
+
+      // Try it
+      10 + 7;
+      9 * 8;
+      60 % 3;
+
+      const num3 = 10;
+      const num4 = 50;
+      9 * num1;
+      num1 ** 3;
+      num2 / num1;
+
+      5 + 10 * 3;
+      (num2 % 9) * num1;
+      num2 + num1 / 8 + 2;
+      //
+
+      // Operator precedence
+      // **, (), *, /, +, -
+
+      // Increment & decrement operator
+      guess++;
+      // can't this : 3++;
+
+      // example
+      let num1 = 4;
+      num1++;
+
+      num1;
+
+      let num2 = 6;
+      num2--;
+      num2;
+      //
+      // Assignment operator
+      let x = 3;
+      let y = 4;
+      x = y; // the value now is 4 because javascript read the last value
+
+      /*
+    +=
+    -=
+    *=
+    /=
+*/
+
+      // Study case : sizing a canvas box with canvas api
+      const canvas = document.getElementById("canvas");
+      const para = document.querySelector("p");
+      const ctx = canvas.getContext("2d");
+
+      // Edit the following two lines ONLY
+      let x0 = 50;
+      let y0 = 50;
+
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      ctx.fillStyle = "green";
+      ctx.fillRect(10, 10, x, y);
+      para.textContent = `The rectangle is ${x}px wide and ${y}px high.`;
+
+      // a.
+      let xOne = 43 + 7;
+      // b.
+      let yOne = 25 * 3;
+      // c.
+      let xTwo = 200 - 1000 / 10;
+      // d.
+      let yTwo = 2 * xTwo;
+
+      // Comparison operator
+      // === strict equality : equal value & equal data type = true
+      // !== strict non equality : not equal value number & not equal data type = true
+      // == non strict equality : equal value & not equal data type =  true
+      // != non strict non equality : not equal value & equal data type = true
+      // < less the
+      // > greater then
+      // <= less then or equal to
+      // >= greater then or equal to
+
+      // study case : start machine button
+      const btn = document.querySelector("button");
+      const txt = document.querySelector("p");
+
+      btn.addEventListener("click", updateBtn);
+
+      function updateBtn() {
+        if (btn.textContent === "Start machine") {
+          btn.textContent = "Stop machine";
+          txt.textContent = "The machine has started!";
+        } else {
+          btn.textContent = "Start machine";
+          txt.textContent = "The machine is stopped.";
+        }
+      }
+    </script>
+  </body>
+</html>

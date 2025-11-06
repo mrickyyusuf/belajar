@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Function - Task 3</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      p {
+        color: purple;
+        margin: 0.5em 0;
+      }
+    </style>
+  </head>
+  <body>
+    <p></p>
+    <script>
+      const names = [
+        "Chris",
+        "Li Kang",
+        "Anne",
+        "Francesca",
+        "Mustafa",
+        "Tina",
+        "Bert",
+        "Jada",
+      ];
+      const para = document.querySelector("p");
+
+      // Don't edit the code above here!
+
+      // Update the code below here
+
+      function random(min, max) {
+        const num = Math.floor(Math.random() * (max - min)) + min;
+        return num;
+      }
+
+      function chooseItem(array) {
+        const choice = array[random(0, array.length)];
+        return choice;
+      }
+
+      para.textContent = chooseItem(names);
+    </script>
+  </body>
+</html>

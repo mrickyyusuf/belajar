@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Conditional - 3</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      p {
+        color: purple;
+        margin: 0.5em 0;
+      }
+    </style>
+  </head>
+  <body>
+    <section></section>
+
+    <script>
+      let machineActive = true;
+      let pwd = "cheese";
+
+      let machineResult;
+      let pwdResult;
+
+      // Add your code here
+      if (machineActive) {
+        machineResult = "Machine is on";
+        pwdResult = pwd === "cheese" ? "Your logged in successfully" : "Your logged in failed";
+      } else {
+        machineResult = "Machine is off";
+      };
+      
+      // Don't edit the code below here!
+
+      const section = document.querySelector("section");
+      const para1 = document.createElement("p");
+      const para2 = document.createElement("p");
+      para1.textContent = machineResult;
+      para2.textContent = pwdResult;
+      section.appendChild(para1);
+      section.appendChild(para2);
+    </script>
+  </body>
+</html>

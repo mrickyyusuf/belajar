@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Filling Guest List</title>
+    <style>
+      html {
+        font-family: sans-serif;
+      }
+
+      h2 {
+        font-size: 16px;
+      }
+
+      .a11y-label {
+        margin: 0;
+        text-align: right;
+        font-size: 0.7rem;
+        width: 98%;
+      }
+
+      body {
+        margin: 10px;
+        background: #f5f9fa;
+      }
+
+      .output {
+        height: 100px;
+        overflow: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="output">
+      <p class="admitted">Admit:</p>
+      <p class="refused">Refuse:</p>
+    </div>
+
+    <script>
+      const people = [
+        "Chris",
+        "Anne",
+        "Colin",
+        "Terri",
+        "Phil",
+        "Lola",
+        "Sam",
+        "Kay",
+        "Bruce",
+      ];
+
+      const admitted = document.querySelector(".admitted");
+      const refused = document.querySelector(".refused");
+      admitted.textContent = "Admit: ";
+      refused.textContent = "Refuse: ";
+
+      // loop starts here
+      for (const peoples of people) {
+        if (peoples === "Phil" || peoples === "Lola") {
+          refused.textContent += `${peoples}, `;
+        } else {
+          admitted.textContent += `${peoples}, `;
+        }
+      }
+
+      refused.textContent += `${refused.textContent.slice(0, -2)}.`;
+      admitted.textContent += `${admitted.textContent.slice(0, -2)}.`;
+    </script>
+  </body>
+</html>

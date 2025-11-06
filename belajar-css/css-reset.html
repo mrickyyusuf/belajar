@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* * {
+        margin: 0;
+        padding: 0;
+    }
+
+    /* body, h1, p {
+        margin: 0;
+    } */
+
+      /* div {
+        width: 200px;
+        height: 200px;
+        background-color: black;
+        margin: 0; 
+        margin: 20px;
+    } */
+      html,
+      body,
+      div,
+      span,
+      applet,
+      object,
+      iframe,
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
+      p,
+      blockquote,
+      pre,
+      a,
+      abbr,
+      acronym,
+      address,
+      big,
+      cite,
+      code,
+      del,
+      dfn,
+      em,
+      img,
+      ins,
+      kbd,
+      q,
+      s,
+      samp,
+      small,
+      strike,
+      strong,
+      sub,
+      sup,
+      tt,
+      var,
+      b,
+      u,
+      i,
+      center,
+      dl,
+      dt,
+      dd,
+      ol,
+      ul,
+      li,
+      fieldset,
+      form,
+      label,
+      legend,
+      table,
+      caption,
+      tbody,
+      tfoot,
+      thead,
+      tr,
+      th,
+      td,
+      article,
+      aside,
+      canvas,
+      details,
+      embed,
+      figure,
+      figcaption,
+      footer,
+      header,
+      hgroup,
+      menu,
+      nav,
+      output,
+      ruby,
+      section,
+      summary,
+      time,
+      mark,
+      audio,
+      video {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font-size: 100%;
+        font: inherit;
+        vertical-align: baseline;
+      }
+      /* HTML5 display-role reset for older browsers */
+      article,
+      aside,
+      details,
+      figcaption,
+      figure,
+      footer,
+      header,
+      hgroup,
+      menu,
+      nav,
+      section {
+        display: block;
+      }
+      body {
+        line-height: 1;
+      }
+      ol,
+      ul {
+        list-style: none;
+      }
+      blockquote,
+      q {
+        quotes: none;
+      }
+      blockquote:before,
+      blockquote:after,
+      q:before,
+      q:after {
+        content: "";
+        content: none;
+      }
+      table {
+        border-collapse: collapse;
+        border-spacing: 0;
+      }
+
+      /* css sintaks */
+      body {
+        font: 16px/28px arial, sans-serif;
+        background-color: #eaeaea;
+        color: #333;
+        background-image: url(../image-placeholder/just-waves.jpg);
+      }
+
+      .top-bar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 40px;
+        background-color: lightskyblue;
+        border-bottom: 3px solid darkblue;
+        z-index: 1;
+      }
+
+      .container {
+        width: 960px;
+        margin: 80px auto;
+        background-color: #fff;
+        position: relative;
+      }
+
+      .twitter {
+        width: 200px;
+        height: 200px;
+        background-image: url(../image-placeholder/twitter-removebg-preview.png);
+        background-repeat: no-repeat;
+        display: inline-block;
+        text-indent: -9999px;
+        position: absolute;
+        top: -55px;
+        right: -55px;
+      }
+
+      .header {
+        padding: 20px;
+        padding-bottom: 10px;
+      }
+
+      .header .judul {
+        font-size: 40px;
+        font-weight: bold;
+      }
+
+      .header ul li {
+        display: inline-block;
+        margin: 20px 10px 0 0;
+      }
+
+      .header a {
+        text-decoration: none;
+        color: salmon;
+        padding: 3px;
+      }
+
+      .header a:hover {
+        background-color: lightskyblue;
+        background-color: white;
+      }
+
+      .hero {
+        height: 300px;
+        background-image: url(../image-placeholder/dino2.jpg);
+        background-size: cover;
+        background-position: 0 -60px;
+        border-bottom: 5px solid salmon;
+        border-top: 5px solid salmon;
+      }
+
+      .main {
+        width: 600px;
+        padding: 20px;
+        box-sizing: border-box;
+        float: left;
+      }
+
+      .main h2 {
+        font-size: 28px;
+        font-weight: bold;
+      }
+
+      .main .penulis {
+        font-size: 11px;
+        margin-top: -5px;
+      }
+
+      .main .penulis a {
+        color: salmon;
+        text-decoration: none;
+      }
+
+      .main p {
+        margin-bottom: 20px;
+        font-size: 14px;
+      }
+
+      /* sidebar */
+      .sidebar {
+        width: 300px;
+        float: right;
+        padding: 20px;
+      }
+
+      .sidebar h3 {
+        font-weight: bold;
+        color: #666;
+      }
+
+      .sidebar img {
+        width: 130px;
+        height: 130px;
+        float: left;
+        padding-right: 10px;
+      }
+
+      .sidebar p {
+        font: 12px/18px arial;
+      }
+
+      .footer {
+        background-color: #333;
+        padding: 10px;
+      }
+
+      .footer .copy {
+         color: #eaeaea;
+         text-align: center;
+         font-size: 12px;
+      }
+
+      /* clearfix */
+      .cf:before,
+      .cf:after {
+          content: " "; /* 1 */
+          display: table; /* 2 */
+      }
+
+      .cf:after {
+          clear: both;
+      }
+
+      .cf {
+          zoom: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <div></div>
+    <h1>Helllo World</h1>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia alias
+      aliquid vel, facere assumenda dolores delectus aspernatur atque non, ipsam
+      tenetur nostrum repellat dolorem placeat vero unde cupiditate sequi! Odit?
+    </p> -->
+    <div class="top-bar"></div>
+    <div class="container">
+      <a href="https://x.com/home" class="twitter" target="_blank">@Twitter</a>
+      <div class="header">
+        <h1 class="judul">MyWebsiteGw</h1>
+        <ul>
+          <li><a href="#">home</a></li>
+          <li><a href="#">about</a></li>
+          <li><a href="#">product</a></li>
+          <li><a href="#">service</a></li>
+          <li><a href="#">contact</a></li>
+        </ul>
+      </div>
+      <div class="hero"></div>
+      <div class="content cf">
+        <div class="main">
+
+          <h2>Judul Artikel</h2>
+          <p class="penulis">ditulis oleh <a href="#"><a>rickyyusuf</a>. Pada September 2025.
+          </p>
+  
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatibus minima numquam temporibus similique maxime alias asperiores vitae id, repellendus deleniti odit nisi, facere illo perspiciatis eius officia! Delectus, sit quod.</p>
+  
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem nemo fugiat repellendus exercitationem illum! Minus consequatur sint autem provident. Earum excepturi, numquam ipsa eius ad, rerum illum, inventore in maiores repellendus provident nobis reiciendis perspiciatis aperiam veritatis officiis ipsam alias odit? Ut, perferendis consequuntur. Enim ad doloribus incidunt eos qui ut id nihil quas laborum, temporibus velit facere unde provident quidem minus? Obcaecati, modi error ipsum tempore at magnam nobis praesentium quibusdam velit blanditiis assumenda itaque non temporibus! Omnis iste itaque sequi id provident. Vel eveniet, atque similique error sed dolorem nam veritatis explicabo repudiandae, assumenda nobis odio, libero modi!</p>
+  
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque itaque sed vero excepturi veritatis harum, aperiam placeat nemo, earum consectetur quidem dicta recusandae cum! Minima impedit incidunt culpa modi error adipisci dignissimos possimus? Quaerat sed, facilis qui voluptatem minus suscipit! Magnam error optio maxime nam dolores soluta architecto iusto deserunt natus repellendus sunt libero illum autem dicta reiciendis, quibusdam doloremque? Quia ducimus quidem dolores delectus eligendi iure commodi, nihil expedita velit, modi mollitia porro aliquam natus accusamus maiores ipsa voluptas?</p>
+        </div>
+        <div class="sidebar">
+          <h3>Tentang Penulis</h3>
+          <img src="../image-placeholder/example.jpg" alt="Ricky Yusuf">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam deleniti id eius est dicta et odit pariatur? Deleniti, et reiciendis doloribus vel beatae praesentium, sunt similique animi, harum fuga tempora.</p>
+        </div>
+      </div>
+      <div class="footer">
+        <p class="copy">Copyright 2025. rickyyusuf</p>
+      </div>
+    </div>
+    <script></script>
+  </body>
+</html>

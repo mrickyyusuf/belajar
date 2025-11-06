@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Conditional - 1</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      p {
+        color: purple;
+        margin: 0.5em 0;
+      }
+    </style>
+  </head>
+  <body>
+    <section></section>
+
+    <script>
+      let season = "summer";
+      let response;
+
+      // Add your code here
+      if (season === "summer") {
+        response = `The season is ${season}`;
+      } else if (season === "winter") {
+        response = `Winter is season that different than ${season}, Winter season it's so cold outside, i'm alone i'm alive~`;
+      } else {
+        response = `We don't know what season it is except ${season}`;
+      };
+
+      // Don't edit the code below here!
+
+      const section = document.querySelector("section");
+      const para1 = document.createElement("p");
+      para1.textContent = response;
+      section.appendChild(para1);
+    </script>
+  </body>
+</html>
